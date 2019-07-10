@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+@function delay($interval, $count, $index) {
+    @return ($index * $interval) - ($interval * $count);
+}
+
+@keyframes stretch-it {
+    0%, 40%, 100% { 
+        transform: scaleY(0.4);
+    }
+    
+    20% { 
+        transform: scaleY(1.0);
+    }
+}
+
+.jini-loader {
+   /* margin: 1em 0;*/
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    
+    .bars {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        > div {
+            width: 5px;
+            height: 32px;
+            border-radius: 3px;
+            margin: 2px;
+            background-color: $color-blue-4;
+            animation: stretch-it 1.2s infinite ease-in-out;
+        }
+        
+        //$n: 5;
+        @for $i from 1 through 5 {
+            > div:nth-child(#{$i}) {
+                animation-delay: delay(0.1s, 5, $i);
+            }
+        }
+    }
+    
+    p {
+        text-align: center;
+        @include all-smcp();
+    }
+}
+
+.mo-mini-basket-wrapper {
+    .jini-loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

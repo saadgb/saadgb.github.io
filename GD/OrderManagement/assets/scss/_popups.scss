@@ -1,0 +1,288 @@
+@charset "UTF-8";
+
+.jini-popup-content {
+    padding: px2rem($main-line-ht-px * 1.5) px2rem($main-line-ht-px);
+    
+    p {
+        margin-bottom: 0;
+    }
+    
+    div[cg-busy] {
+        position: static !important;
+    }
+}
+
+.jini-popup-buttons-pane {
+    border-top: 1px solid $color-border;
+    display: flex;
+    justify-content: flex-end;
+    padding: px2rem($main-line-ht-px / 2) px2rem($main-line-ht-px);
+}
+
+.validation-success-popup-content {
+    .institution-name {
+        margin-bottom: px2rem($main-line-ht-px * 0.5);
+        color: $color-text-light;
+    }
+}
+
+.validation-success-popup-meta {
+    @include font-size(13, 13 * 1.5, true);
+    margin-top: px2rem($main-line-ht-px);
+    //display: flex;
+    
+    dt, dd {
+        display: inline;
+    }
+    
+    dt {
+        font-weight: $font-medium;
+        
+        &:after {
+            content: ":";
+            margin-right: 0.25em;
+        }
+    }
+    
+    dd {
+        &:after {
+            content: "\0a";
+            white-space: pre;
+        }
+    }
+}
+
+.validation-failure-popup-content {
+    padding: 0;
+    display: flex;
+    //align-items: center;
+    
+    .prod-details,
+    .validation-failure-msg {
+        padding: px2rem($main-line-ht-px * 1.5) px2rem($main-line-ht-px);
+    }
+    
+    .prod-details {
+        width: 38%;
+        
+        .prod-title,
+        .prod-subtitle {
+            @include font-size(16, 16 * 1.5, true);
+        }
+        
+        //.prod-title {
+        //    margin-bottom: 0;
+        //}
+        
+        .prod-meta {
+            margin-top: px2rem($main-line-ht-px);
+        }
+    }
+    
+    .validation-failure-msg {
+        width: 62%;
+        border-left: 1px solid $color-border;
+        @include font-size(14, 14 * 1.5, true);
+        
+        p {
+            margin-bottom: px2rem(14 * 1.5);
+        }
+    }
+    
+    .validation-failure-msg-option {
+        @include font-size(13, 13 * 1.5, true);
+    }
+    
+    .validation-failure-popup-actions {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: px2rem($main-line-ht-px * 2);
+        
+        button:not(:last-child) {
+            margin-right: 0.4em;
+        }
+    }
+}
+
+.choose-classes-popup-content {
+    .classes-list {
+        max-height: 340px;
+        overflow-y: auto;
+        margin-bottom: px2rem($main-line-ht-px);
+        
+        & > li {
+            margin-bottom: px2rem($main-line-ht-px * 0.5);
+        }
+        
+        li ul {
+            @include font-size(13, 13 * 1.5, true);
+            padding: px2rem($main-line-ht-px * 0.25) 0;
+            
+            li {
+                margin-bottom: px2rem(2.5);
+                padding: 0 px2rem($main-line-ht-px * 0.25);
+                display: flex;
+                justify-content: space-between;
+                
+                &:hover {
+                    background-color: $color-bg-misc;
+                }
+            }
+        }
+    }
+    
+    .class-label {
+        display: flex;
+        justify-content: space-between;
+        background-color: $color-bg-misc;
+        padding: px2rem($main-line-ht-px * 0.25);
+        
+        p {
+            font-weight: $font-medium;
+        }
+    }
+    
+    .class-label-select {
+        @include all-smcp();
+        position: relative;
+        top: -1px;
+    }
+    
+    .class-item {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .class-item-select {
+        position: relative;
+        top: -2px;
+    }
+    
+    .k-checkbox-label {
+        padding-left: 0;
+        padding-right: 1.5em;
+        
+        &:before {
+            left: auto;
+            right: 0;
+            top: 2px;
+        }
+    }
+    
+    .calculate-price-btn {
+        width: 100%;
+    }
+
+}
+
+.another-customer-popup-content {
+    max-height: 340px;
+    overflow-y: auto;
+    
+    .block {
+        padding: 0 0 px2rem($main-line-ht-px * 2) 0;
+        
+        > .block-level-actions {
+            top: 0;
+        }
+    }
+}
+
+.all-prods-in-bundle-popup-content {
+    max-height: 340px;
+    overflow-y: auto;
+    
+    .block {
+        padding: 0 0 px2rem($main-line-ht-px * 2) 0;
+    }
+    
+    .all-prods-in-bundle {
+        @include font-size(13, 13 * 1.5, true);
+        
+        th, td {
+            padding: 4px;
+            
+            &:nth-child(1) {
+                width: 44%;
+            }
+            
+            &:nth-child(2),
+            &:nth-child(3) {
+                width: 22%;
+            }
+        }
+    }
+}
+
+.license-invoice-popup-content {
+    padding: px2rem($main-line-ht-px * 1.25) px2rem($main-line-ht-px);
+    
+    .calculate-price-btn {
+        margin-top: px2rem($main-line-ht-px);
+        width: 100%;
+    }
+    
+    .prod-price {
+        text-align: center;
+        margin-top: px2rem($main-line-ht-px);
+    }
+}
+
+.license-invoice-popup-options {
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.li-form-group {
+    @include font-size(13, 13 * 1.5, true);
+    margin: px2rem($main-line-ht-px * 0.75) 0;
+    position: relative;
+    //display: flex;
+    
+    label {
+        display: block;
+        font-weight: $font-normal;
+        //@include font-size(13.5, 14, false);
+        @include all-smcp();
+        margin-bottom: px2rem($main-line-ht-px / 4);
+        
+        span {
+            color: $color-text-light;
+        }
+    }
+    
+    label + .k-datepicker {
+        margin-top: 0;
+    }
+    
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+    
+    .control-suffix {
+        margin-bottom: 0;
+        
+        .control {
+            flex: 1;
+            
+            > * {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.li-form-subgroup-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    .li-form-subgroup {
+        width: calc(50% + 21px);
+        
+        & + .li-form-subgroup {
+            width: calc(50% - 41px);
+        }
+    }
+}

@@ -1,0 +1,340 @@
+{% import "../templates/macros/navigation.html" as nav %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>InLogic - Settings</title>
+<link href="assets/css/style.css" rel="stylesheet" type="text/css">
+<link href="assets/css/simplebar.css" rel="stylesheet" type="text/css">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<link rel="shortcut icon" href="assets/img/logo_ums.png">
+</head>
+
+<body>
+<header class="nav-home" id="toper">
+  <nav class="navbar navbar-expand-lg navbar-light bg-top-nav"> <a class="navbar-brand" href="#"><img src="assets/img/logo_ums.png" width="70"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item {%if activePage == 'home' %} active {% endif %}"> <a class="nav-link" href="student-Index.html"><i class="fas fa-home mr-1"></i> home <span class="sr-only">(current)</span></a> </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <li class="nav-item"> <a class="nav-link" href="#">DA</a> </li>
+        <li class="nav-item active"> <a class="nav-link pl-0" href="404.html">EN</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#"><img src="https://i.kinja-img.com/gawker-media/image/upload/gd8ljenaeahpn0wslmlz.jpg" class="image--cover" alt=""></a> </li>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">logout</button>
+      </form>
+    </div>
+  </nav>
+</header>
+<section id="student-index">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <h1 class="custom-fas"><i class="far fa-grin-beam mr-3"></i>Hi Stine</h1>
+        <p>Select one of the available features.</p>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-4 mb-3">
+        <div class="card">
+          <div class="card-header"><i class="fas fa-columns mr-2"></i> Welcome Intro </div>
+          <div class="card-body">
+            <p class="card-text">Take a tour in our welcome portal</p>
+            <a href="welcome-student.html" class="btn btn-primary text-uppercase">Continue<i class="fas fa-arrow-circle-right ml-1"></i></a> </div>
+        </div>
+      </div>
+      <div class="col-xl-4 mb-3">
+        <div class="card">
+          <div class="card-header"><i class="fas fa-unlock-alt mr-2"></i> Change Password </div>
+          <div class="card-body">
+            <p class="card-text">Here you can change your existing password</p>
+            <a href="#" class="btn btn-primary text-uppercase"  data-toggle="modal" data-target="#exampleModalPass">Continue<i class="fas fa-arrow-circle-right ml-1"></i></a> </div>
+        </div>
+      </div>
+      <div class="col-xl-4 mb-3">
+        <div class="card">
+          <div class="card-header"><i class="fas fa-info mr-2"></i> IT rule </div>
+          <div class="card-body">
+            <p class="card-text">Show IT rule already accepted</p>
+            <a href="#" class="btn btn-primary text-uppercase">Continue<i class="fas fa-arrow-circle-right ml-1"></i></a> </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xl-4 mb-3">
+        <div class="card">
+          <div class="card-header"><i class="fas fa-address-card mr-2"></i> Your info </div>
+          <div class="card-body">
+            <p class="card-text">Check/maintain your info</p>
+            <a href="#" class="btn btn-primary text-uppercase"  data-toggle="modal" data-target=".your-info-student">Continue<i class="fas fa-arrow-circle-right ml-1"></i></a> </div>
+        </div>
+      </div>
+      <div class="col-xl-4 mb-3">
+        <div class="card">
+          <div class="card-header"><i class="fas fa-hand-holding-usd mr-2"></i> your loans </div>
+          <div class="card-body">
+            <p class="card-text">View loans registered with you</p>
+            <a href="student-loans.html" class="btn btn-primary text-uppercase">Continue<i class="fas fa-arrow-circle-right ml-1"></i></a> </div>
+        </div>
+      </div>
+      <div class="col-xl-4 mb-3">
+        <div class="card">
+          <div class="card-header"><i class="far fa-clock mr-1"></i> Timetable </div>
+          <div class="card-body">
+            <p class="card-text">Reset ITRegler</p>
+            <a href="student-timetable.html" class="btn btn-primary text-uppercase">Continue<i class="fas fa-arrow-circle-right ml-1"></i></a> </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xl-4 mb-3">
+        <div class="card">
+          <div class="card-header"><i class="fas fa-tachometer-alt mr-2"></i> sms subscription</div>
+          <div class="card-body">
+            <p class="card-text">Select the services you wish to subscribe to</p>
+            <a href="#" class="btn btn-primary text-uppercase"  data-toggle="modal" data-target=".bd-example-modal-lg-sms-sub">Continue<i class="fas fa-arrow-circle-right ml-1"></i></a> </div>
+        </div>
+      </div>
+      <div class="col-xl-4 mb-3">
+        <div class="card">
+          <div class="card-header"><i class="fas fa-graduation-cap mr-2"></i> your Grades </div>
+          <div class="card-body">
+            <p class="card-text"> Your registered grades</p>
+            <a href="student-grades.html" class="btn btn-primary text-uppercase">Continue<i class="fas fa-arrow-circle-right ml-1"></i></a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Change password Modal -->
+  <div class="modal fade" id="exampleModalPass" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Change password</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+        </div>
+        <div class="modal-body">
+          <p> Here you can change your existing password</p>
+          <div class="row">
+            <div class="col-xl-12 mb-3 mt-3">
+              <label><strong>old password</strong></label>
+              <div class="input-group">
+                <input type="password" class="form-control" placeholder="" aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
+                <div class="input-group-append" id="button-addon4"> </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-12 mb-3 ">
+              <label><strong>New password</strong></label>
+              <div class="input-group">
+                <input type="password" class="form-control" placeholder="" aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
+                <div class="input-group-append" id="button-addon4"> </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-12 mb-2">
+              <label><strong>Repeat New password</strong></label>
+              <div class="input-group">
+                <input type="password" class="form-control" placeholder="" aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
+                <div class="input-group-append" id="button-addon4"> </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-12">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">Receive SMS with the new password</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- student info Modal -->
+  
+  <div class="modal fade your-info-student" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Your information</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+        </div>
+        <div class="modal-body">
+          <div class="container mb-5">
+            <div class="row">
+              <div class="col-xl-12">
+                <h1 class="custom-fas"><i class="fas fa-address-card mr-3"></i>Your Information</h1>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-xl-6 mb-5"> <br>
+                <label>Enter your name</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" value="James Smith" aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
+                  <div class="input-group-append" id="button-addon4"> </div>
+                </div>
+                <br>
+                <label>address</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" value="Flat 23" aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
+                  <div class="input-group-append" id="button-addon4"> </div>
+                </div>
+                <br>
+                <label>private mobile</label>
+                <div class="input-group">
+                  <input type="tel" class="form-control" value="+45656565" aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
+                  <div class="input-group-append" id="button-addon4"> </div>
+                </div>
+                <br>
+                <label>Home phone</label>
+                <div class="input-group">
+                  <input type="tel" class="form-control" value="+45656595" aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
+                  <div class="input-group-append" id="button-addon4"> </div>
+                </div>
+              </div>
+              <div class="col-xl-6">
+                <div class="center-form">
+                  <div class="form-group center-align update-pic"> <img src="assets/img/user.jpg" class="profile-pic"> </div>
+                  <div class="form-group center-align profile-icons"> <a href="" class="btn btn-link btn-empty text-capitalize"><i class="fas fa-camera "></i><br>
+                    take <br>
+                    Picture</a> <a href="" class="btn btn-link btn-empty text-capitalize"><i class="fas fa-images"></i><br>
+                    upload <br>
+                    Picture</a> </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-6">
+                <label class="font-weight-bold">Enrolled in class</label>
+                <p>You are not enrolled in any activities. If you are enrolled in courses that are not listed, or if some data are not correct, please contact the student administration.</p>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-xl-6">
+                <label class="font-weight-bold">parkering</label>
+                <p>You are not enrolled in any activities. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- sms subscription modal -->
+  <div class="modal fade bd-example-modal-lg-sms-sub" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">SMS Subscription</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+        </div>
+        <div class="modal-body">
+          <div class="container mb-5">
+            <div class="row">
+              <div class="col-xl-8">
+                <h1 class="custom-fas"><i class="fas fa-comments mr-3"></i>sms subscription</h1>
+                <p>Please select the services you wish to subscribe:</p>
+              </div>
+              <div class="col-xl-4 ">
+                <label>Select preferred language </label>
+                <div class="input-group mb-3">
+                  <select class="custom-select" id="inputGroupSelect01">
+                    <option selected>English</option>
+                    <option value="1">Danish</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-xl-12 mb-5"> <br>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck">
+                  <label class="custom-control-label sms-custom-label" for="customCheck">news</label>
+                  <p class="pl-para">Subscribe to receive general news from the school.</p>
+                </div>
+                <br>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck2">
+                  <label class="custom-control-label sms-custom-label" for="customCheck2">sms timetable</label>
+                  <p class="pl-para">If you are enrolled in this service, you will receive an SMS containing today's scheduled lessons, x hours before the first lesson. Note that there is no guarantee for delivery of SMS and the service should therefore be used in addition to the existing schedule. </p>
+                  <div class="center-form ">
+                    <div class="center-align">
+                      <div class=" sms-days-selector">
+                        <label class="text-normal-sms-label">Send me an SMS before </label>
+                        <select class="custom-select">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                          <option value="11" selected="">11</option>
+                        </select>
+                        <label class=" text-normal-sms-label">hours from the current schedule. </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck3">
+                  <label class="custom-control-label sms-custom-label" for="customCheck3">Timetable changes</label>
+                  <p class="pl-para">Subscribe to receive an SMS when changes occur in today's timetable.</p>
+                </div>
+                <br>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck4">
+                  <label class="custom-control-label sms-custom-label" for="customCheck4">SMS Grades</label>
+                  <p class="pl-para">Subscribe to receive recently released grades.</p>
+                </div>
+                <br>
+                <p>Number used:<span class="ml-1"><strong>12345677</strong> </span></p>
+                <button type="button" class="btn btn-primary">Update Number</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% include "../templates/partials/footer.html" %}
+</body>
+</html>

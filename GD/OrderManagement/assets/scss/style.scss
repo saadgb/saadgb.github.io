@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+@import "reset.scss";
+@import "helpers.scss";
+@import "globals.scss";
+
+@import "kendo-overrides.scss";
+
+@import "mo-main-page.scss";
+//@import "wizard.scss";
+
+@import "choose-shop-customer.scss";
+@import "search-products.scss";
+@import "create-order.scss";
+@import "order-summary.scss";
+@import "popups.scss";
+@import "loader.scss";
+
+@import "custom.scss";

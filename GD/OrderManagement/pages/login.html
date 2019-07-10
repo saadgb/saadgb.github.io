@@ -1,0 +1,49 @@
+{% import "../templates/macros/navigation.html" as nav %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Login - Jini</title>
+<link rel="stylesheet" type="text/css" href="assets/css/vendor/kendo-nova-all.css">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<link rel="icon" type="image/png" href="assets/img/favicon.png" />
+</head>
+
+<body>
+{% block content %}
+{{nav.active('home')}}
+{{nav.leftsidebar('home')}}
+{% endblock %}
+<div class="container mt-3 mb-0">
+  <div class="col">
+    <h1>Login</h1>
+    <div class="mo-form-group">
+                    <label for="b02">Username</label>
+                    <input id="b02" type="text" class="k-textbox error">
+                    <p class="jini-form-error">
+                      <span class="k-icon k-i-close-circle mr-lt"></span>Oops ... you need to fill out something here!</p>
+                  </div>
+    <div class="mo-form-group">
+                    <label for="b03">password</label>
+                    <input id="b03" type="password" class="k-textbox error" required>
+                    <p class="jini-form-error">
+                      <span class="k-icon k-i-close-circle mr-lt"></span>Oops ... you need to fill out something here!</p>
+                  </div>
+    <label class="col2 mt-1">Save Password?
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span> </label>
+    <input type="submit" value="Login" class="k-button k-primary">
+	  
+	  
+	  
+	  
+	  
+	  
+  </div>
+</div>
+{% include "../templates/partials/footer.html" %}
+</body>
+</html>
