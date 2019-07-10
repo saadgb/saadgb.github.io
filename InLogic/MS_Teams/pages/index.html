@@ -5,35 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>InLogic Teams</title>
-<link href="assets/css/style.css" rel="stylesheet" type="text/css">
-<link href="assets/css/overlayScrollbars.min.css" rel="stylesheet" type="text/css">
-<link href="assets/css/quill.snow.css" rel="stylesheet" type="text/css">
-<link href="assets/css/bootstrap-select.css" rel="stylesheet" type="text/css">
-<script src="https://kit.fontawesome.com/5e9d6fd47c.js"></script>
-
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary text-white">
-  <a class="navbar-brand" href="#">Inlogic Teams</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      
-   
-    </ul>
- 
-  </div>
-</nav>
-
-
+{%- block content -%}   
+{% import "../templates/macros/navigation.html" as nav %}
+{{nav.active('home')}}
+{%- endblock -%}
 </head>
 <body>
 <section id="dashboard">
@@ -684,15 +659,6 @@
     </div>
   </div>
 </section>
-<script src="assets/js/jquery-3.3.1.slim.min.js"></script>
-<script src="assets/js/bootstrap.bundle.js"></script>
-<script src="assets/js/inlogic-ms-team-caller.js"></script>
-<script src="assets/js/inlogic-ms-team-controls.js"></script>
-<script src="assets/js/OverlayScrollbars.min.js"></script>
-<script src="assets/js/quill.js"></script>
-<script src="assets/js/bootstrap-select.min.js"></script>
-<script src="assets/js/custom.js"></script>
-<script src="assets/js/table-custom.js"></script>
-
+{% include "../templates/partials/footer.html" %}
 </body>
 </html>
