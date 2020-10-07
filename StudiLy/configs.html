@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta.njk -->
+    <meta charset="utf-8">
+    <title>Studi.ly Admin Portal</title><!-- change this -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/simplebar.css">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-select.min.css">
+    <!--
+<link rel="icon" href="assets/img/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" href="assets/img/favicons/favicon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="assets/img/favicons/favicon-180x180.png" />
+<meta name="msapplication-TileImage" content="assets/img/favicons/favicon-270x270.png" />
+-->
+    <!-- end meta.njk -->
+  </head>
+  <body class="" style="">
+    <!-- index.njk -->
+    <!-- header.njk -->
+    <header role="banner" class="">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+        <a class="navbar-brand" href="#"><img src="assets/img/studi_ly_logo.svg" width="50"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="dashboard.html">Dashboard </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="admins.html">Admins</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="#">Settings</a>
+            </li>
+          </ul>
+          <div class="dropdown">
+            <button class="btn btn-sm pr-0" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <a class="" href="#"><img src="assets/img/img_avatar.png" alt="Avatar" class="avatar"></a>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right pt-0 " aria-labelledby="dropdownMenuButton">
+              <li class="dropdown-item " href="#">
+                <div class="media "> <img class="avatar-l align-self-start mr-2" src="assets/img/img_avatar.png" alt="avatar-xl">
+                  <div class="media-body">
+                    <h6 class="top-profile pt-2 mb-0">James Smith</h6>
+                    <small>Studi.ly Admin</small>
+                  </div>
+                </div>
+              </li>
+              <li class="dropdown-item"> <a href="my-profile.html"> View profile</a> </li>
+              <li class="dropdown-item" data-toggle="modal" data-target="#changePassword" data-keyboard="false" data-backdrop="static"> <a href="#"> Change Password</a> </li>
+              <li class="dropdown-item"> <a href="#">Logout</a> </li>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- end header.njk -->
+    <!-- end index.njk -->
+    <nav class="sidebar">
+      <a href="javascript:void(0);"><img src="assets/img/drawer-menu.svg" class="icon icon-sidebar" width="25" id="sidebarCollapse"> </a>
+      <ul>
+        <li class=""> <a href="admin-view.html"> <span class="icon" data-toggle="tooltip" data-placement="right" title="Classes" data-delay='{"show":"700"}'>
+              <svg>
+                <use xlink:href="assets/img/project-icons.svg#classes"></use>
+              </svg>
+            </span> Classes </a> </li>
+        <li class="active"> <a href="configs.html"> <span class="icon" data-toggle="tooltip" data-placement="right" title="Configurations" data-delay='{"show":"700"}'>
+              <svg>
+                <use xlink:href="assets/img/project-icons.svg#config"></use>
+              </svg>
+            </span> Configurations </a> </li>
+      </ul>
+    </nav>
+    <section class="admin-view-section">
+      <div class="bread-crumb">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item " aria-current="page"><a class="text-dark" href="dashboard.html">Dashboard</a></li>
+            <li class="breadcrumb-item " aria-current="page"><a class="text-dark" href="admins.html">Admins</a></li>
+            <li class="breadcrumb-item " aria-current="page">James Smith </li>
+            <li class="breadcrumb-item active" aria-current="page">Configurations</li>
+          </ol>
+        </nav>
+      </div>
+      <section class="outer-wrapper">
+        <div class="sectionE not-expanded">
+          <div class="container-fluid">
+            <div class="row mb-0">
+              <div class="col-lg-12">
+                <ul class="nav nav-pills" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation"> <a class="nav-link active" id="grading-tab" data-toggle="tab" href="#grading" role="tab" aria-controls="grading" aria-selected="true">Grading scale library</a> </li>
+                  <li class="nav-item" role="presentation"> <a class="nav-link" id="account-tab" data-toggle="tab" href="#account" role="tab" aria-controls="account" aria-selected="false">Account & Billings</a> </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="grading" role="tabpanel" aria-labelledby="grading-tab">...</div>
+                  <div class="tab-pane fade" id="account" role="tabpanel" aria-labelledby="account-tab">
+                    <div class="row mb-2 mt-3">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="name">Name<span class="text-danger ml-1">*</span></label>
+                          <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Add name">
+                        </div>
+                        <div class="form-group">
+                          <label for="email">Email<span class="text-danger ml-1">*</span></label>
+                          <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Add email">
+                        </div>
+                        <div class="form-group">
+                          <label for="phone">Phone<span class="text-danger ml-1">*</span></label>
+                          <input type="phone" class="form-control" id="phone" aria-describedby="phone" placeholder="Add phone">
+                        </div>
+                        <div class="form-group">
+                          <label for="address">School Address<span class="text-danger ml-1">*</span></label>
+                          <input type="text" class="form-control" id="address" aria-describedby="address" placeholder="Add address">
+                        </div>
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="address2" aria-describedby="address2" placeholder="Address line 2">
+                        </div>
+                        <div class="form-group">
+                          <label for="schoolname">School Name<span class="text-danger ml-1">*</span></label>
+                          <input type="text" class="form-control" id="schoolname" aria-describedby="schoolname" placeholder="Add schoolname">
+                        </div>
+                        <div class="form-group">
+                          <label for="email">School Country<span class="text-danger ml-1">*</span></label>
+                          <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Please select</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="phone">School VAT<span class="text-danger ml-1">*</span></label>
+                          <input type="number" class="form-control" id="phone" aria-describedby="phone" placeholder="Add phone">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="card" style="width: 18rem;">
+                          <div class="card-body">
+                            <h1 class="card-title text-primary">Current Package</h1>
+                            <h2 class="card-subtitle mb-2 text-muted">Package</h2>
+                            <p class="card-text">Trial</p>
+                            <br>
+                            <h2 class="card-subtitle mb-2 text-muted">Package start date</h2>
+                            <p class="card-text">24-06-2020</p>
+                            <br>
+                            <h2 class="card-subtitle mb-2 text-muted">Package end date</h2>
+                            <p class="card-text">24-06-2021</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-4 ">
+                      <div class="col-md-12">
+                        <h1 class="header-title">Change package</h1>
+                        <div class="d-flex justify-content-start text-center">
+                          <div class="card-deck">
+                            <div class="card plan-selected" style="width: 18rem;">
+                              <div class="card-body ">
+                                <h1 class="card-title mb-4 text-primary">Free Trial</h1>
+                                <h2 class="card-subtitle mb-3 ">0$ /mo</h2>
+                                <h2 class="card-subtitle mb-2 text-muted">3 months free trial</h2>
+                                <p class="card-text">Including all classes and users. Requires login with a Global Admin of your tenant to sign up</p>
+                              </div>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                              <div class="card-body">
+                                <h1 class="card-title mb-4 text-primary">Professional</h1>
+                                <h2 class="card-subtitle mb-2 ">10$ /mo</h2>
+                                <h2 class="card-subtitle mb-3 text-muted">&nbsp</h2>
+                                <p class="card-text">Including all classes and users. Requires login with a Global Admin of your tenant to sign up</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-primary">Save</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- footer.njk -->
+    <footer role="contentinfo" class="">
+      <div class="container">
+        <p></p>
+      </div>
+    </footer>
+    <!-- end footer.njk -->
+    <script src='assets/js/vendor/jquery-3.5.1.min.js'></script>
+    <script src='assets/js/vendor/bootstrap.bundle.min.js'></script>
+    <script src='assets/js/project-custom.js'></script><!-- replace 'project' with project name -->
+    <script src='assets/js/project-caller.js'></script><!-- replace 'project' with project name -->
+    <script src='assets/js/vendor/simplebar.min.js'></script>
+    <script src='assets/js/vendor/bootstrap-select.min.js'></script>
+  </body>
+</html>
