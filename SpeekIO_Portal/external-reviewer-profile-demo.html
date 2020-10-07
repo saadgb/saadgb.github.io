@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta.njk -->
+    <meta charset="utf-8">
+    <title>SpeekIO</title>
+    <!-- change this -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootree.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/quill.snow.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/apexcharts.css">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <script src="assets/js/apexcharts.min.js"></script>
+    <!-- end meta.njk -->
+  </head>
+  <body style="--primary:#1F3D5E; --secondary:#1F3D5E;">
+    <header>
+      <nav class="navbar navbar-expand navbar-dark bg-secondary">
+        <div class="sidebar-brand p-2 "> <a href="#"> <img src="assets/img/speekio-logo.svg" width="130"> </a> </div>
+        <div class="collapse navbar-collapse" id="navbarsExample02">
+          <ul class="navbar-nav ml-auto">
+            <li> <span type="button" onclick="printProfile('printableArea')" class="btn btn-primary btn-sm"><i class="fas fa-print"></i>Print profile</span></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <content>
+        <section>
+          <div class="profile-wrapper">
+            <div class="container pt-4 ">
+              <div class="row ">
+                <div class="col-md-8" id="printableArea">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="border cv-container-preview">
+                        <div class="d-flex ">
+                          <div class="cv-sidebar">
+                            <div class="d-flex flex-column text-center mb-4">
+                              <h2 class="text-white mt-2"><i class="fas fa-user-tie"></i>0001</h2>
+                            </div>
+                            <h6 class="mr-1 text-uppercase w-100">Job manager contact</h6>
+                            <ul class="list-unstyled">
+                              <li><i class="fas fa-user-tie"></i>Mr. John Smith</li>
+                              <li><i class="fas fa-phone-alt"></i>+45-999-2622870</li>
+                              <li><i class="fas fa-envelope"></i>john.smith@xyz.com</li>
+                            </ul>
+                            <br>
+                            <h6 class="mr-1 text-uppercase w-100">Job details</h6>
+                            <ul class="list-unstyled">
+                              <li>Project Management</li>
+                              <li>Job ID: 20069</li>
+                            </ul>
+                            <br>
+                            <h6 class="mr-1 text-uppercase w-100">Comments & ratings</h6>
+                            <ul class="list-unstyled">
+                              <li class="text-warning"><i class="fa fa-star mr-1"></i><i class="fa fa-star mr-1"></i><i class="fa fa-star mr-1"></i><i class="fa fa-star mr-1"></i><i class="fas fa-star-half-alt"></i></li>
+                              <li><i class="fas fa-comment-dots"></i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet arcu sed felis tristique, vitae ullamcorper tortor ornare. Fusce libero erat, porta a tellus sit amet, accumsan vestibulum orci. Duis congue eget urna at vehicula. </li>
+                            </ul>
+                            <br>
+                            <!--
+                       <div class="d-flex flex-column">
+                      <img src="assets/img/qr.svg" width="150" class="mx-auto">
+                           <small class="w-75 mx-auto text-center">Scan this QR code to view candidate video or visit this url: <a href="#" style="color: #A0D7F6;">https://abc.speek.io/abc_Cfjjd773 </a></small>
+                      </div>
+                      -->
+                            <div class="footer">
+                              <p class="small text-muted mb-0">Powered by:</p>
+                              <img src="assets/img/speekio-logo.svg" class="logo-sm">
+                            </div>
+                          </div>
+                          <div class="main-content-cv pt-4">
+                            <div class="card mb-3">
+                              <div class="card-body row">
+                                <div class="col-12">
+                                  <div class="test-results-container">
+                                    <h6 class="text-uppercase w-100 mb-4">Test results</h6>
+                                    <div class="d-flex w-50">
+                                      <div class="mr-auto">
+                                        <h6 class="text-secondary font-weight-normal">
+                                          <svg width="30" height="25" fill="#1F3D5E" class="mr-1">
+                                            <use xlink:href="assets/img/project-icons.svg#auto-icon"></use>
+                                          </svg> Auto-score</h6>
+                                      </div>
+                                      <div>70/75</div>
+                                    </div>
+                                    <div class="d-flex w-50 ">
+                                      <div class="mr-auto">
+                                        <h6 class="text-secondary font-weight-normal">
+                                          <svg width="30" height="25" fill="#1F3D5E" class="mr-1">
+                                            <use xlink:href="assets/img/project-icons.svg#manual-icon"></use>
+                                          </svg> Manual score</h6>
+                                      </div>
+                                      <div> 05/25</div>
+                                    </div>
+                                    <div class="d-flex w-50 ">
+                                      <div class="mr-auto">
+                                        <h6 class="text-secondary font-weight-normal">
+                                          <svg width="30" height="25" fill="#fdab3d" class="mr-1">
+                                            <use xlink:href="assets/img/project-icons.svg#medal"></use>
+                                          </svg> Total score </h6>
+                                      </div>
+                                      <div>95/100</div>
+                                    </div>
+                                    <br>
+                                    <h6 class="mb-1">Maths</h6>
+                                    <div class="progress mb-3">
+                                      <div class="progress-bar pt-1" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                    <h6 class="mb-1">English</h6>
+                                    <div class="progress mb-3">
+                                      <div class="progress-bar pt-1" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                                    </div>
+                                    <h6 class="mb-1">Analytical</h6>
+                                    <div class="progress mb-3">
+                                      <div class="progress-bar pt-1" role="progressbar" style="width: 99%;" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100">99%</div>
+                                    </div>
+                                    <h6 class="mb-1">Writing</h6>
+                                    <div class="progress mb-3">
+                                      <div class="progress-bar pt-1" role="progressbar" style="width: 51%;" aria-valuenow="51" aria-valuemin="0" aria-valuemax="100">51%</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card mb-3">
+                              <div class="card-body row">
+                                <div class="col-12">
+                                  <div class="form-group mb-0">
+                                    <div class="d-flex justify-content-between">
+                                      <h6 class="mr-1 text-uppercase ">JOB manager assessment </h6>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet arcu sed felis tristique, vitae ullamcorper tortor ornare. Fusce libero erat, porta a tellus sit amet, accumsan vestibulum orci. Duis congue eget urna at vehicula. Etiam faucibus leo nec ante fringilla, non ornare lectus malesuada. Vivamus hendrerit elit et eros venenatis, et congue dolor dignissim. Integer ex massa, convallis et massa vel, vehicula egestas leo. Nulla tempor velit non quam tincidunt auctor. Vivamus fringilla..</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card mb-3">
+                              <div class="card-body row">
+                                <div class="col-12">
+                                  <div class="form-group mb-0">
+                                    <div class="d-flex justify-content-between">
+                                      <h6 class="mr-1 text-uppercase ">REFERENCE OPINION </h6>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet arcu sed felis tristique, vitae ullamcorper tortor ornare. Fusce libero erat, porta a tellus sit amet, accumsan vestibulum orci. Duis congue eget urna at vehicula. Etiam faucibus leo nec ante fringilla, non ornare lectus malesuada. Vivamus hendrerit elit et eros venenatis, et congue dolor dignissim. Integer ex massa, convallis et massa vel, vehicula egestas leo. Nulla tempor velit non quam tincidunt auctor. Vivamus fringilla..</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card mb-3">
+                              <div class="card-body row">
+                                <div class="col-12">
+                                  <div class="form-group mb-0">
+                                    <div class="d-flex justify-content-between">
+                                      <h6 class="mr-1 text-uppercase ">candidate education</h6>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet arcu sed felis tristique, vitae ullamcorper tortor ornare. Fusce libero erat, porta a tellus sit amet, accumsan vestibulum orci. Duis congue eget urna at vehicula. Etiam faucibus leo nec ante fringilla, non ornare lectus malesuada. Vivamus hendrerit elit et eros venenatis, et congue dolor dignissim. Integer ex massa, convallis et massa vel, vehicula egestas leo. Nulla tempor velit non quam tincidunt auctor. Vivamus fringilla..</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="pg-breaker"></span>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="border cv-container-preview">
+                        <div class="d-flex ">
+                          <div class="cv-sidebar">
+                            <div class="d-flex flex-column text-center mb-4">
+                              <h2 class="text-white mt-2"><i class="fas fa-user-tie"></i>0001</h2>
+                            </div>
+                            <h6 class="mr-1 text-uppercase w-100">Job manager contact</h6>
+                            <ul class="list-unstyled">
+                              <li><i class="fas fa-user-tie"></i>Mr. John Smith</li>
+                              <li><i class="fas fa-phone-alt"></i>+45-999-2622870</li>
+                              <li><i class="fas fa-envelope"></i>john.smith@xyz.com</li>
+                            </ul>
+                            <br>
+                            <h6 class="mr-1 text-uppercase w-100">Job details</h6>
+                            <ul class="list-unstyled">
+                              <li>Project Management</li>
+                              <li>Job ID: 20069</li>
+                            </ul>
+                            <br>
+                            <h6 class="mr-1 text-uppercase w-100">Comments & ratings</h6>
+                            <ul class="list-unstyled">
+                              <li class="text-warning"><i class="fa fa-star mr-1"></i><i class="fa fa-star mr-1"></i><i class="fa fa-star mr-1"></i><i class="fa fa-star mr-1"></i><i class="fas fa-star-half-alt"></i></li>
+                              <li><i class="fas fa-comment-dots"></i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet arcu sed felis tristique, vitae ullamcorper tortor ornare. Fusce libero erat, porta a tellus sit amet, accumsan vestibulum orci. Duis congue eget urna at vehicula. </li>
+                            </ul>
+                            <br>
+                            <!--
+                       <div class="d-flex flex-column">
+                      <img src="assets/img/qr.svg" width="150" class="mx-auto">
+                           <small class="w-75 mx-auto text-center">Scan this QR code to view candidate video or visit this url: <a href="#" style="color: #A0D7F6;">https://abc.speek.io/abc_Cfjjd773 </a></small>
+                      </div>
+                      -->
+                            <div class="footer">
+                              <p class="small text-muted mb-0">Powered by:</p>
+                              <img src="assets/img/speekio-logo.svg" class="logo-sm">
+                            </div>
+                          </div>
+                          <div class="main-content-cv pt-4">
+                            <div class="card mb-3">
+                              <div class="card-body row">
+                                <div class="col-12">
+                                  <div class="form-group mb-0">
+                                    <div class="d-flex justify-content-between">
+                                      <h6 class="mr-1 text-uppercase ">candidate certificates</h6>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet arcu sed felis tristique, vitae ullamcorper tortor ornare. Fusce libero erat, porta a tellus sit amet, accumsan vestibulum orci. Duis congue eget urna at vehicula. Etiam faucibus leo nec ante fringilla, non ornare lectus malesuada. Vivamus hendrerit elit et eros venenatis, et congue dolor dignissim. Integer ex massa, convallis et massa vel, vehicula egestas leo. Nulla tempor velit non quam tincidunt auctor. Vivamus fringilla..</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card mb-3">
+                              <div class="card-body row">
+                                <div class="col-12">
+                                  <div class="form-group mb-0">
+                                    <div class="d-flex justify-content-between">
+                                      <h6 class="mr-1 text-uppercase ">Opinion of former employer</h6>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet arcu sed felis tristique, vitae ullamcorper tortor ornare. Fusce libero erat, porta a tellus sit amet, accumsan vestibulum orci. Duis congue eget urna at vehicula. Etiam faucibus leo nec ante fringilla, non ornare lectus malesuada. Vivamus hendrerit elit et eros venenatis, et congue dolor dignissim. Integer ex massa, convallis et massa vel, vehicula egestas leo. Nulla tempor velit non quam tincidunt auctor. Vivamus fringilla..</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 sticky-panel">
+                  <div class="card">
+                    <div class="card-header  card-header-custom ">
+                      <h5>Comments Box</h5>
+                    </div>
+                    <div class="card-body">
+                      <textarea class="form-control height-fix" placeholder="Add any comment"></textarea>
+                      <small class="text-muted"><i class="fas fa-info-circle"></i>You can add any comments regarding candidate profile.</small>
+                      <div class="d-flex justify-content-center mt-5">
+                        <div id="full-stars-example">
+                          <div class="rating-group d-flex justify-content-center">
+                            <label aria-label="1 star" class="rating__label" for="rating-1"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                            <input class="rating__input" name="rating" id="rating-1" value="1" type="radio">
+                            <label aria-label="2 stars" class="rating__label" for="rating-2"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                            <input class="rating__input" name="rating" id="rating-2" value="2" type="radio">
+                            <label aria-label="3 stars" class="rating__label" for="rating-3"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                            <input class="rating__input" name="rating" id="rating-3" value="3" type="radio" checked>
+                            <label aria-label="4 stars" class="rating__label" for="rating-4"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                            <input class="rating__input" name="rating" id="rating-4" value="4" type="radio">
+                            <label aria-label="5 stars" class="rating__label" for="rating-5"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                            <input class="rating__input" name="rating" id="rating-5" value="5" type="radio">
+                          </div>
+                          <p class="desc text-muted">Please rate the candidate</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-footer text-muted"> <a href="candidate-details-test-summary.html">
+                        <button type="button" class="btn btn-primary float-right ">Submit comment</button>
+                      </a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </content>
+    </main>
+    <!-- footer.njk -->
+    <footer role="contentinfo" class="">
+    </footer>
+    <!-- end footer.njk -->
+    <script src='assets/js/vendor/jquery-3.4.1.min.js'></script>
+    <script src='assets/js/jquery-ui.min.js'></script>
+    <script src='assets/js/vendor/bootstrap.bundle.min.js'></script>
+    <script src='assets/js/bootree.min.js'></script>
+    <script src='assets/js/quill.js'></script>
+    <script src='assets/js/snap.svg-min.js'></script>
+    <script src='assets/js/speekio-custom.js'></script>
+    <script src='assets/js/speekio-caller.js'></script>
+  </body>
+</html>

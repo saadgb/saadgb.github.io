@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta.njk -->
+    <meta charset="utf-8">
+    <title>SpeekIO</title>
+    <!-- change this -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootree.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/quill.snow.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/apexcharts.css">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <script src="assets/js/apexcharts.min.js"></script>
+    <!-- end meta.njk -->
+  </head>
+  <body style="--primary:#1F3D5E; --secondary:#1F3D5E;">
+    <!-- header.njk -->
+    <nav class="navbar navbar-top navbar-expand-xl navbar-dark bg-white">
+      <div class="left-content"><a class="navbar-brand pt-0 pb-0 mr-4" href="index.html"><img src="assets/img/speekio-logo.svg" width="130"></a> <a href="javascript:void(0);"><img src="assets/img/drawer-menu.svg" class="icon icon-sidebar mr-3" width="25" class="mr-3" id="sidebarCollapse"> </a> </div>
+      <div class="right-content">
+        <!--<div class="dropdown " >
+      <button class="btn btn-sm" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <a href="#" class="text-white mr-3 notification"><i class="fas fa-bell fa-2x"></i> <span class="badge">99+</span></a>
+      </button>
+      <div class="dropdown-menu dropdown-menu-right pt-0 notification-dropdown" aria-labelledby="dropdownMenu2"  style="width: 250px;">
+        <li class="dropdown-item" ><strong><i class="fas fa-bell mr-1"></i>Your Notifications</strong></li>
+        <li class="dropdown-item" >3 candidates applied for Project Manager</li>
+        <li class="dropdown-item" >2 reviewers left feedback</li>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item text-primary" href="#">See all notifications</a> </div>
+    </div>-->
+        <div id="main" class="mr-2"> <span style="cursor:pointer" onclick="openNav()"> <a href="javascript:void(0);"> <i class="fas fa-users mr-0"></i><span class="font-weight-bold text-secondary ml-1">Team (4)</span> </a> </span> </div>
+        <div id="mySidenav" class="right-sidenav">
+          <div> <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="font-weight-bold ml-3 mb-2">Online members</div>
+          </div>
+          <a href="#"><i class="fas fa-circle text-success mr-2"></i>John Smith</a> <a href="#"><i class="fas fa-circle text-success mr-2"></i>Adolph Blaine</a> <a href="#"><i class="fas fa-circle text-success mr-2"></i>Sherman Thomas</a> <a href="#"><i class="fas fa-circle text-success mr-2"></i>Adolph Blaine</a>
+          <hr>
+          <div class="font-weight-bold ml-3 mt-4  mb-2 ">Offline members</div>
+          <a href="#" class="text-muted"><i class="far fa-circle text-muted mr-2"></i>Sara Smith</a> <a href="#" class="text-muted"><i class="far fa-circle text-muted mr-2"></i>Finge Smith</a>
+        </div>
+        <div class="dropdown ">
+          <button class="btn btn-sm" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="" href="#"><img src="assets/img/img_avatar.png" alt="Avatar" class="avatar"></a>
+          </button>
+          <div class="dropdown-menu dropdown-menu-right pt-0" aria-labelledby="dropdownMenuButton">
+            <li class="dropdown-item " href="#">
+              <div class="media "> <img class="avatar-l align-self-start mr-2" src="assets/img/img_avatar.png" alt="avatar-xl">
+                <div class="media-body">
+                  <h6 class="top-profile pt-2 mb-0">James Smith</h6>
+                  <small>Hiring Manager</small>
+                </div>
+              </div>
+            </li>
+            <li class="dropdown-item"> <a href="my-profile.html"> View profile</a> </li>
+            <li class="dropdown-item" data-toggle="modal" data-target="#changePassword" data-keyboard="false" data-backdrop="static"> <a href="#"> Change Password</a> </li>
+            <li class="dropdown-item"> <a href="#">Logout</a> </li>
+          </div>
+        </div>
+      </div>
+      <!-- Change Password Modal -->
+      <div class="modal fade" id="changePassword" tabindex="-1" role="dialog" aria-labelledby="changePassword" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+            </div>
+            <div class="modal-body">
+              <div class="col-md-12 mb-3">
+                <label for="validationCustom05">Current password<span class="text-danger ml-1">*</span></label>
+                <input type="password" class="form-control" id="validationCustom05" placeholder="Your current password">
+                <div class="valid-feedback"> Looks good! </div>
+              </div>
+              <div class="col-md-12 mb-3">
+                <label for="validationCustom05">New password<span class="text-danger ml-1">*</span></label>
+                <input type="password" class="form-control" id="validationCustom05" placeholder="Your new password">
+                <div class="valid-feedback"> Looks good! </div>
+              </div>
+              <div class="col-md-12 mb-3">
+                <label for="validationCustom05">New Password confirmation<span class="text-danger ml-1">*</span></label>
+                <input type="password" class="form-control" id="validationCustom05" placeholder="Your new password again">
+                <div class="valid-feedback"> Looks good! </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Change Password Modal -->
+    </nav>
+    <!-- end header.njk -->
+    <main>
+      <nav class="sidebar">
+        <ul>
+          <li class=""> <a href="index.html"> <span class="icon" data-toggle="tooltip" data-placement="right" title="Dashboard" data-delay='{"show":"700"}'>
+                <svg>
+                  <use xlink:href="assets/img/project-icons.svg#dashboard"></use>
+                </svg>
+              </span> dashboard </a> </li>
+          <li class="active"> <a href="job-manager.html"> <span class="icon" data-toggle="tooltip" data-placement="right" title="Job Manager" data-delay='{"show":"700"}'>
+                <svg>
+                  <use xlink:href="assets/img/project-icons.svg#job-manager"></use>
+                </svg>
+              </span> Job Manager </a> </li>
+          <li class=""> <a href="library.html"> <span class="icon" data-toggle="tooltip" data-placement="right" title="Job Manager" data-delay='{"show":"700"}'>
+                <svg>
+                  <use xlink:href="assets/img/project-icons.svg#library"></use>
+                </svg>
+              </span> Library </a> </li>
+          <li class=""> <a href="candidate-manager.html"> <span class="icon" data-toggle="tooltip" data-placement="right" title="Candidate Manager" data-delay='{"show":"700"}'>
+                <svg>
+                  <use xlink:href="assets/img/project-icons.svg#candidate-manager"></use>
+                </svg>
+              </span> Candidate Manager </a> </li>
+          <li class=""> <a href="interview-scheduler.html"> <span class="icon" data-toggle="tooltip" data-placement="right" title=" Interview Scheduler" data-delay='{"show":"700"}'>
+                <svg>
+                  <use xlink:href="assets/img/project-icons.svg#video-interview"></use>
+                </svg>
+              </span> Interview Scheduler </a> </li>
+          <li class=""> <a href="users.html"> <span class="icon" data-toggle="tooltip" data-placement="right" title=" Users & Roles " data-delay='{"show":"700"}'>
+                <svg>
+                  <use xlink:href="assets/img/project-icons.svg#users"></use>
+                </svg>
+              </span> Users & Roles </a> </li>
+          <li class=""> <a href="settings.html"> <span class="icon" data-toggle="tooltip" data-placement="right" title="Configurations" data-delay='{"show":"700"}'>
+                <svg>
+                  <use xlink:href="assets/img/project-icons.svg#settings"></use>
+                </svg>
+              </span> Configurations </a> </li>
+          <!--  
+       <li class=""> <a href="invoice-manager.html"> <span class="icon">
+      <svg>
+        <use xlink:href="assets/img/project-icons.svg#invoice"></use>
+      </svg>
+      </span> Invoice manager </a> </li>
+    
+    
+    <li class=""> <a href="reports.html"> <span class="icon">
+      <svg>
+        <use xlink:href="assets/img/project-icons.svg#reports"></use>
+      </svg>
+      </span> Reports </a> </li>  -->
+        </ul>
+      </nav>
+      <div class="bread-crumb">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li> <a href="javascript: history.go(-1)">
+                <svg class="back-btn">
+                  <use xlink:href="assets/img/project-icons.svg#go-back"></use>
+                </svg>
+              </a> </li>
+            <li class="breadcrumb-item"> <a href="job-manager.html">Job Manager</a> </li>
+            <li class="breadcrumb-item "><a href="#"> Project Management Job </a></li>
+            <li class="breadcrumb-item active"> John Smith test to external reviewer </li>
+          </ol>
+        </nav>
+      </div>
+      <content>
+        <section class="sectionE not-expanded">
+          <div class="examiner-wrapper">
+            <div class="container pt-4 ">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="border cv-container">
+                    <div class="d-flex ">
+                      <div class="cv-sidebar">
+                        <div class="d-flex flex-column text-center mb-4">
+                          <h2 class="text-white mt-2"><i class="fas fa-user-tie"></i>0001</h2>
+                        </div>
+                        <h6 class="mr-1 text-uppercase w-100">Job manager contact</h6>
+                        <ul class="list-unstyled">
+                          <li><i class="fas fa-user-tie"></i>Mr. John Smith</li>
+                          <li><i class="fas fa-phone-alt"></i>+45-999-2622870</li>
+                          <li><i class="fas fa-envelope"></i>john.smith@xyz.com</li>
+                        </ul>
+                        <br>
+                        <h6 class="mr-1 text-uppercase w-100">Job details</h6>
+                        <ul class="list-unstyled">
+                          <li>Project Management</li>
+                          <li>Job ID: 20069</li>
+                        </ul>
+                        <br>
+                        <h6 class="mr-1 text-uppercase w-100">Comments & ratings</h6>
+                        <ul class="list-unstyled">
+                          <li class="text-warning"><i class="fa fa-star mr-1"></i><i class="fa fa-star mr-1"></i><i class="fa fa-star mr-1"></i><i class="fa fa-star mr-1"></i><i class="fas fa-star-half-alt"></i></li>
+                          <li><i class="fas fa-comment-dots"></i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet arcu sed felis tristique, vitae ullamcorper tortor ornare. Fusce libero erat, porta a tellus sit amet, accumsan vestibulum orci. Duis congue eget urna at vehicula. </li>
+                        </ul>
+                        <br>
+                        <!--
+                       <div class="d-flex flex-column">
+                      <img src="assets/img/qr.svg" width="150" class="mx-auto">
+                           <small class="w-75 mx-auto text-center">Scan this QR code to view candidate video or visit this url: <a href="#" style="color: #A0D7F6;">https://abc.speek.io/abc_Cfjjd773 </a></small>
+                      </div>
+                      -->
+                        <div class="footer">
+                          <p class="small text-muted mb-0">Powered by:</p>
+                          <img src="assets/img/speekio-logo-w.svg" class="logo-sm">
+                        </div>
+                      </div>
+                      <div class="main-content-cv pt-4">
+                        <div class="card mb-3">
+                          <div class="card-body row">
+                            <div class="col-1">
+                              <div class="static-drag  mt-n1"> <span class="icon-drag"><a href="#" class="qs-control-icons cursor-grab">
+                                    <svg>
+                                      <use xlink:href="assets/img/project-icons.svg#drag"></use>
+                                    </svg>
+                                  </a> </span></div>
+                            </div>
+                            <div class="col-11">
+                              <div class="test-results-container">
+                                <h6 class="text-uppercase w-100 mb-4">Test results</h6>
+                                <div class="d-flex w-50">
+                                  <div class="mr-auto">
+                                    <h6 class="text-secondary font-weight-normal">
+                                      <svg width="30" height="25" fill="#1F3D5E" class="mr-1">
+                                        <use xlink:href="assets/img/project-icons.svg#auto-icon"></use>
+                                      </svg> Auto-score</h6>
+                                  </div>
+                                  <div>70/75</div>
+                                </div>
+                                <div class="d-flex w-50 ">
+                                  <div class="mr-auto">
+                                    <h6 class="text-secondary font-weight-normal">
+                                      <svg width="30" height="25" fill="#1F3D5E" class="mr-1">
+                                        <use xlink:href="assets/img/project-icons.svg#manual-icon"></use>
+                                      </svg> Manual score</h6>
+                                  </div>
+                                  <div> 05/25</div>
+                                </div>
+                                <div class="d-flex w-50 ">
+                                  <div class="mr-auto">
+                                    <h6 class="text-secondary font-weight-normal">
+                                      <svg width="30" height="25" fill="#fdab3d" class="mr-1">
+                                        <use xlink:href="assets/img/project-icons.svg#medal"></use>
+                                      </svg> Total score </h6>
+                                  </div>
+                                  <div>95/100</div>
+                                </div>
+                                <br>
+                                <h6 class="mb-1">Maths</h6>
+                                <div class="progress mb-3">
+                                  <div class="progress-bar pt-1" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                </div>
+                                <h6 class="mb-1">English</h6>
+                                <div class="progress mb-3">
+                                  <div class="progress-bar pt-1" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                                </div>
+                                <h6 class="mb-1">Analytical</h6>
+                                <div class="progress mb-3">
+                                  <div class="progress-bar pt-1" role="progressbar" style="width: 99%;" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100">99%</div>
+                                </div>
+                                <h6 class="mb-1">Writing</h6>
+                                <div class="progress mb-3">
+                                  <div class="progress-bar pt-1" role="progressbar" style="width: 51%;" aria-valuenow="51" aria-valuemin="0" aria-valuemax="100">51%</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card mb-3">
+                          <div class="card-body row">
+                            <div class="col-1">
+                              <div class="static-drag  mt-n1"> <span class="icon-drag"><a href="#" class="qs-control-icons cursor-grab">
+                                    <svg>
+                                      <use xlink:href="assets/img/project-icons.svg#drag"></use>
+                                    </svg>
+                                  </a> </span></div>
+                            </div>
+                            <div class="col-11">
+                              <div class="form-group">
+                                <label for="exampleInputEmail1" class="font-weight-bold">Title</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="Job manager assessment">
+                              </div>
+                              <div class="form-group ">
+                                <label for="exampleInputEmail1" class="font-weight-bold">Description</label>
+                                <small class="text-muted float-right">characters remaining = 0</small>
+                                <textarea type="text" class="form-control mb-1" id="name" maxlength="500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet arcu sed felis tristique, vitae ullamcorper tortor ornare. Fusce libero erat, porta a tellus sit amet, accumsan vestibulum orci. Duis congue eget urna at vehicula. Etiam faucibus leo nec ante fringilla, non ornare lectus malesuada. Vivamus hendrerit elit et eros venenatis, et congue dolor dignissim. Integer ex massa, convallis et massa vel, vehicula egestas leo. Nulla tempor velit non quam tincidunt auctor. Vivamus fringilla..</textarea>
+                              </div>
+                              <a href="#" class="float-left text-secondary mr-3"> <i class="fas fa-trash-alt"></i>Delete </a>
+                              <div class="d-flex justify-content-end"> <span> <a href="#" class="float-right font-weight-bold">Save </a> <a href="#" class="float-right mr-3 text-secondary">Cancel </a> </span> </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card mb-3">
+                          <div class="card-body row">
+                            <div class="col-1">
+                              <div class="static-drag  mt-n1"> <span class="icon-drag"><a href="#" class="qs-control-icons cursor-grab">
+                                    <svg>
+                                      <use xlink:href="assets/img/project-icons.svg#drag"></use>
+                                    </svg>
+                                  </a> </span></div>
+                            </div>
+                            <div class="col-11">
+                              <div class="form-group mb-0">
+                                <div class="d-flex justify-content-between">
+                                  <h6 class="mr-1 text-uppercase ">Candidate education </h6>
+                                  <div> <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"> <i class="fas fa-pen"></i> </a> </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet arcu sed felis tristique, vitae ullamcorper tortor ornare. Fusce libero erat, porta a tellus sit amet, accumsan vestibulum orci. Duis congue eget urna at vehicula. Etiam faucibus leo nec ante fringilla, non ornare lectus malesuada. Vivamus hendrerit elit et eros venenatis, et congue dolor dignissim. Integer ex massa, convallis et massa vel, vehicula egestas leo. Nulla tempor velit non quam tincidunt auctor. Vivamus fringilla..</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card mb-3">
+                          <div class="card-body row">
+                            <div class="col-1">
+                              <div class="static-drag  mt-n1"> <span class="icon-drag"><a href="#" class="qs-control-icons cursor-grab">
+                                    <svg>
+                                      <use xlink:href="assets/img/project-icons.svg#drag"></use>
+                                    </svg>
+                                  </a> </span></div>
+                            </div>
+                            <div class="col-11">
+                              <div class="form-group mb-0">
+                                <div class="d-flex justify-content-between">
+                                  <h6 class="mr-1 text-uppercase ">REFERENCE OPINION </h6>
+                                  <div> <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"> <i class="fas fa-pen"></i> </a> </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet arcu sed felis tristique, vitae ullamcorper tortor ornare. Fusce libero erat, porta a tellus sit amet, accumsan vestibulum orci. Duis congue eget urna at vehicula. Etiam faucibus leo nec ante fringilla, non ornare lectus malesuada. Vivamus hendrerit elit et eros venenatis, et congue dolor dignissim. Integer ex massa, convallis et massa vel, vehicula egestas leo. Nulla tempor velit non quam tincidunt auctor. Vivamus fringilla..</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="border cv-container">
+                    <div class="d-flex ">
+                      <div class="cv-sidebar">
+                        <div class="d-flex flex-column text-center mb-4">
+                          <h2 class="text-white mt-2"><i class="fas fa-user-tie"></i>0001</h2>
+                        </div>
+                        <h6 class="mr-1 text-uppercase w-100">Job manager contact</h6>
+                        <ul class="list-unstyled">
+                          <li><i class="fas fa-user-tie"></i>Mr. John Smith</li>
+                          <li><i class="fas fa-phone-alt"></i>+45-999-2622870</li>
+                          <li><i class="fas fa-envelope"></i>john.smith@xyz.com</li>
+                        </ul>
+                        <br>
+                        <h6 class="mr-1 text-uppercase w-100">Job details</h6>
+                        <ul class="list-unstyled">
+                          <li>Project Management</li>
+                          <li>Job ID: 20069</li>
+                        </ul>
+                        <br>
+                        <h6 class="mr-1 text-uppercase w-100">Comments & ratings</h6>
+                        <ul class="list-unstyled">
+                          <li class="text-warning"><i class="fa fa-star mr-1"></i><i class="fa fa-star mr-1"></i><i class="fa fa-star mr-1"></i><i class="fa fa-star mr-1"></i><i class="fas fa-star-half-alt"></i></li>
+                          <li><i class="fas fa-comment-dots"></i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet arcu sed felis tristique, vitae ullamcorper tortor ornare. Fusce libero erat, porta a tellus sit amet, accumsan vestibulum orci. Duis congue eget urna at vehicula. </li>
+                        </ul>
+                        <br>
+                        <!--
+                       <div class="d-flex flex-column">
+                      <img src="assets/img/qr.svg" width="150" class="mx-auto">
+                           <small class="w-75 mx-auto text-center">Scan this QR code to view candidate video or visit this url: <a href="#" style="color: #A0D7F6;">https://abc.speek.io/abc_Cfjjd773 </a></small>
+                      </div>
+                      -->
+                        <div class="footer">
+                          <p class="small text-muted mb-0">Powered by:</p>
+                          <img src="assets/img/speekio-logo-w.svg" class="logo-sm">
+                        </div>
+                      </div>
+                      <div class="main-content-cv pt-4">
+                        <div class="card mb-3">
+                          <div class="card-body row">
+                            <div class="col-1">
+                              <div class="static-drag  mt-n1"> <span class="icon-drag"><a href="#" class="qs-control-icons cursor-grab">
+                                    <svg>
+                                      <use xlink:href="assets/img/project-icons.svg#drag"></use>
+                                    </svg>
+                                  </a> </span></div>
+                            </div>
+                            <div class="col-11">
+                              <div class="form-group">
+                                <label class="font-weight-bold">Title</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="job-manager" value="Job manager assessment ">
+                              </div>
+                              <div class="form-group ">
+                                <label for="exampleInputEmail1" class="font-weight-bold">Description</label>
+                                <small class="text-muted float-right">characters remaining = 0</small>
+                                <textarea type="text" class="form-control mb-1" id="name" maxlength="500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet arcu sed felis tristique, vitae ullamcorper tortor ornare. Fusce libero erat, porta a tellus sit amet, accumsan vestibulum orci. Duis congue eget urna at vehicula. Etiam faucibus leo nec ante fringilla, non ornare lectus malesuada. Vivamus hendrerit elit et eros venenatis, et congue dolor dignissim. Integer ex massa, convallis et massa vel, vehicula egestas leo. Nulla tempor velit non quam tincidunt auctor. Vivamus fringilla..</textarea>
+                              </div>
+                              <a href="#" class="float-left text-secondary mr-3"> <i class="fas fa-trash-alt"></i>Delete </a>
+                              <div class="d-flex justify-content-end"> <span> <a href="#" class="float-right font-weight-bold">Save </a> <a href="#" class="float-right mr-3 text-secondary">Cancel </a> </span> </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card mb-3">
+                          <div class="card-body row">
+                            <div class="col-1">
+                              <div class="static-drag  mt-n1"> <span class="icon-drag"><a href="#" class="qs-control-icons cursor-grab">
+                                    <svg>
+                                      <use xlink:href="assets/img/project-icons.svg#drag"></use>
+                                    </svg>
+                                  </a> </span></div>
+                            </div>
+                            <div class="col-11">
+                              <div class="form-group">
+                                <label for="exampleInputEmail1" class="font-weight-bold">Title</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="Candidate documents">
+                              </div>
+                              <div class="form-group">
+                                <label for="exampleInputEmail1" class="font-weight-bold">Description</label>
+                                <small class="text-muted float-right">characters remaining = 0</small>
+                                <textarea type="text" class="form-control mb-3" id="name" maxlength="500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet arcu sed felis tristique, vitae ullamcorper tortor ornare. Fusce libero erat, porta a tellus sit amet, accumsan vestibulum orci. Duis congue eget urna at vehicula. Etiam faucibus leo nec ante fringilla, non ornare lectus malesuada. Vivamus hendrerit elit et eros venenatis, et congue dolor dignissim. Integer ex massa, convallis et massa vel, vehicula egestas leo. Nulla tempor velit non quam tincidunt auctor. Vivamus fringilla..</textarea>
+                                <div class="form-group mb-4">
+                                  <label for="exampleInputEmail1" class="font-weight-bold">Attachment(s)</label>
+                                  <p>
+                                    <button type="button" class="btn btn-primary btn-sm " disabled="">Upload</button>
+                                  </p>
+                                  <p class="text-primary"><small><span>My_resume.pdf</span></small><a href="#" class="text-danger"><i class="fas fa-times-circle ml-2" aria-hidden="true"></i></a></p>
+                                </div>
+                              </div>
+                              <a href="#" class="float-left text-secondary mr-3"> <i class="fas fa-trash-alt"></i>Delete </a>
+                              <div class="d-flex justify-content-end"> <span> <a href="#" class="float-right font-weight-bold">Save </a> <a href="#" class="float-right mr-3 text-secondary">Cancel </a> </span> </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="btn-group dropup w-100 add-qs-dropdown">
+                          <button type="button" class="btn btn-outline-dashed add-qs-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-plus-circle"></i>Add new </button>
+                          <div class="dropdown-menu dropdown-menu-add-new" aria-labelledby="dropdownMenuButton" x-placement="top-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, -2px, 0px);"> <a class="dropdown-item" href="#">Job manager assessment</a><a class="dropdown-item" href="#">Reference opinion</a> <a class="dropdown-item" href="#">Work exertions</a> <a class="dropdown-item" href="#">Candidate certificates</a> <a class="dropdown-item" href="#">Candidate education</a> <a class="dropdown-item" href="#">Opinion of former employer</a> <a class="dropdown-item" href="#">Free text</a> <a class="dropdown-item" href="#">Free text with attachement</a> </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <nav class="navbar fixed-bottom wizard-footer bg-light ml-5 justify-content-end">
+                <form class="form-inline my-2 my-lg-0">
+                  <a href="external-reviewer-profile-demo.html" target="_blank">
+                    <button type="button" class="btn btn-outline-primary mr-2">Preview</button>
+                  </a> <a href="#" data-toggle="modal" data-target="#sendtoreviewer" data-keyboard="false" data-backdrop="static">
+                    <button type="button" class="btn btn-primary">Next</button>
+                  </a>
+                </form>
+              </nav>
+            </div>
+          </div>
+          <!-- Modal -->
+          <div class="modal fade" id="sendtoreviewer" tabindex="-1" role="dialog" aria-labelledby="sendtoreveiwerLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Candidate 0001 </h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+                </div>
+                <div class="modal-body">
+                  <label for="NameField" class="font-weight-bolder mb-2">Enter the email address of the team member you wish to add</label>
+                  <form class="form-inline">
+                    <input type="text" class="form-control mb-2 mr-sm-2 w-100" id="inlineFormInputName2" placeholder="Team member email">
+                  </form>
+                  <small class="text-muted">You can enter multiple email addresses by separating them with a comma (,)</small>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Send Profile</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal -->
+        </section>
+      </content>
+    </main>
+    <!-- footer.njk -->
+    <footer role="contentinfo" class="">
+    </footer>
+    <!-- end footer.njk -->
+    <script src='assets/js/vendor/jquery-3.4.1.min.js'></script>
+    <script src='assets/js/jquery-ui.min.js'></script>
+    <script src='assets/js/vendor/bootstrap.bundle.min.js'></script>
+    <script src='assets/js/bootree.min.js'></script>
+    <script src='assets/js/quill.js'></script>
+    <script src='assets/js/snap.svg-min.js'></script>
+    <script src='assets/js/speekio-custom.js'></script>
+    <script src='assets/js/speekio-caller.js'></script>
+  </body>
+</html>

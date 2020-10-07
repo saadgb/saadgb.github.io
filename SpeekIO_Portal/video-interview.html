@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta.njk -->
+    <meta charset="utf-8">
+    <title>SpeekIO</title>
+    <!-- change this -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootree.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/quill.snow.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/apexcharts.css">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <script src="assets/js/apexcharts.min.js"></script>
+    <!-- end meta.njk -->
+  </head>
+  <body style="--primary:#1F3D5E; --secondary:#1F3D5E;">
+    <!-- header.njk -->
+    <nav class="navbar navbar-top navbar-expand-xl navbar-dark bg-white">
+      <div class="left-content"><a class="navbar-brand pt-0 pb-0 mr-4" href="index.html"><img src="assets/img/speekio-logo.svg" width="130"></a> <a href="javascript:void(0);"><img src="assets/img/drawer-menu.svg" class="icon icon-sidebar mr-3" width="25" class="mr-3" id="sidebarCollapse"> </a> </div>
+      <div class="right-content">
+        <!--<div class="dropdown " >
+      <button class="btn btn-sm" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <a href="#" class="text-white mr-3 notification"><i class="fas fa-bell fa-2x"></i> <span class="badge">99+</span></a>
+      </button>
+      <div class="dropdown-menu dropdown-menu-right pt-0 notification-dropdown" aria-labelledby="dropdownMenu2"  style="width: 250px;">
+        <li class="dropdown-item" ><strong><i class="fas fa-bell mr-1"></i>Your Notifications</strong></li>
+        <li class="dropdown-item" >3 candidates applied for Project Manager</li>
+        <li class="dropdown-item" >2 reviewers left feedback</li>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item text-primary" href="#">See all notifications</a> </div>
+    </div>-->
+        <div id="main" class="mr-2"> <span style="cursor:pointer" onclick="openNav()"> <a href="javascript:void(0);"> <i class="fas fa-users mr-0"></i><span class="font-weight-bold text-secondary ml-1">Team (4)</span> </a> </span> </div>
+        <div id="mySidenav" class="right-sidenav">
+          <div> <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="font-weight-bold ml-3 mb-2">Online members</div>
+          </div>
+          <a href="#"><i class="fas fa-circle text-success mr-2"></i>John Smith</a> <a href="#"><i class="fas fa-circle text-success mr-2"></i>Adolph Blaine</a> <a href="#"><i class="fas fa-circle text-success mr-2"></i>Sherman Thomas</a> <a href="#"><i class="fas fa-circle text-success mr-2"></i>Adolph Blaine</a>
+          <hr>
+          <div class="font-weight-bold ml-3 mt-4  mb-2 ">Offline members</div>
+          <a href="#" class="text-muted"><i class="far fa-circle text-muted mr-2"></i>Sara Smith</a> <a href="#" class="text-muted"><i class="far fa-circle text-muted mr-2"></i>Finge Smith</a>
+        </div>
+        <div class="dropdown ">
+          <button class="btn btn-sm" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="" href="#"><img src="assets/img/img_avatar.png" alt="Avatar" class="avatar"></a>
+          </button>
+          <div class="dropdown-menu dropdown-menu-right pt-0" aria-labelledby="dropdownMenuButton">
+            <li class="dropdown-item " href="#">
+              <div class="media "> <img class="avatar-l align-self-start mr-2" src="assets/img/img_avatar.png" alt="avatar-xl">
+                <div class="media-body">
+                  <h6 class="top-profile pt-2 mb-0">James Smith</h6>
+                  <small>Hiring Manager</small>
+                </div>
+              </div>
+            </li>
+            <li class="dropdown-item"> <a href="my-profile.html"> View profile</a> </li>
+            <li class="dropdown-item" data-toggle="modal" data-target="#changePassword" data-keyboard="false" data-backdrop="static"> <a href="#"> Change Password</a> </li>
+            <li class="dropdown-item"> <a href="#">Logout</a> </li>
+          </div>
+        </div>
+      </div>
+      <!-- Change Password Modal -->
+      <div class="modal fade" id="changePassword" tabindex="-1" role="dialog" aria-labelledby="changePassword" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+            </div>
+            <div class="modal-body">
+              <div class="col-md-12 mb-3">
+                <label for="validationCustom05">Current password<span class="text-danger ml-1">*</span></label>
+                <input type="password" class="form-control" id="validationCustom05" placeholder="Your current password">
+                <div class="valid-feedback"> Looks good! </div>
+              </div>
+              <div class="col-md-12 mb-3">
+                <label for="validationCustom05">New password<span class="text-danger ml-1">*</span></label>
+                <input type="password" class="form-control" id="validationCustom05" placeholder="Your new password">
+                <div class="valid-feedback"> Looks good! </div>
+              </div>
+              <div class="col-md-12 mb-3">
+                <label for="validationCustom05">New Password confirmation<span class="text-danger ml-1">*</span></label>
+                <input type="password" class="form-control" id="validationCustom05" placeholder="Your new password again">
+                <div class="valid-feedback"> Looks good! </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Change Password Modal -->
+    </nav>
+    <!-- end header.njk -->
+    <main>
+      <nav class="sidebar">
+        <ul>
+          <li class=""> <a href="index.html"> <span class="icon" data-toggle="tooltip" data-placement="right" title="Dashboard" data-delay='{"show":"700"}'>
+                <svg>
+                  <use xlink:href="assets/img/project-icons.svg#dashboard"></use>
+                </svg>
+              </span> dashboard </a> </li>
+          <li class="active"> <a href="job-manager.html"> <span class="icon" data-toggle="tooltip" data-placement="right" title="Job Manager" data-delay='{"show":"700"}'>
+                <svg>
+                  <use xlink:href="assets/img/project-icons.svg#job-manager"></use>
+                </svg>
+              </span> Job Manager </a> </li>
+          <li class=""> <a href="library.html"> <span class="icon" data-toggle="tooltip" data-placement="right" title="Job Manager" data-delay='{"show":"700"}'>
+                <svg>
+                  <use xlink:href="assets/img/project-icons.svg#library"></use>
+                </svg>
+              </span> Library </a> </li>
+          <li class=""> <a href="candidate-manager.html"> <span class="icon" data-toggle="tooltip" data-placement="right" title="Candidate Manager" data-delay='{"show":"700"}'>
+                <svg>
+                  <use xlink:href="assets/img/project-icons.svg#candidate-manager"></use>
+                </svg>
+              </span> Candidate Manager </a> </li>
+          <li class=""> <a href="interview-scheduler.html"> <span class="icon" data-toggle="tooltip" data-placement="right" title=" Interview Scheduler" data-delay='{"show":"700"}'>
+                <svg>
+                  <use xlink:href="assets/img/project-icons.svg#video-interview"></use>
+                </svg>
+              </span> Interview Scheduler </a> </li>
+          <li class=""> <a href="users.html"> <span class="icon" data-toggle="tooltip" data-placement="right" title=" Users & Roles " data-delay='{"show":"700"}'>
+                <svg>
+                  <use xlink:href="assets/img/project-icons.svg#users"></use>
+                </svg>
+              </span> Users & Roles </a> </li>
+          <li class=""> <a href="settings.html"> <span class="icon" data-toggle="tooltip" data-placement="right" title="Configurations" data-delay='{"show":"700"}'>
+                <svg>
+                  <use xlink:href="assets/img/project-icons.svg#settings"></use>
+                </svg>
+              </span> Configurations </a> </li>
+          <!--  
+       <li class=""> <a href="invoice-manager.html"> <span class="icon">
+      <svg>
+        <use xlink:href="assets/img/project-icons.svg#invoice"></use>
+      </svg>
+      </span> Invoice manager </a> </li>
+    
+    
+    <li class=""> <a href="reports.html"> <span class="icon">
+      <svg>
+        <use xlink:href="assets/img/project-icons.svg#reports"></use>
+      </svg>
+      </span> Reports </a> </li>  -->
+        </ul>
+      </nav>
+      <div class="bread-crumb">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li> <a href="javascript: history.go(-1)">
+                <svg class="back-btn">
+                  <use xlink:href="assets/img/project-icons.svg#go-back"></use>
+                </svg>
+              </a> </li>
+            <li class="breadcrumb-item"> <a href="job-manager.html">Job Manager</a> </li>
+            <li class="breadcrumb-item "><a href="#"> Project Management Job</a> </li>
+            <li class="breadcrumb-item active"> John Smith </li>
+          </ol>
+        </nav>
+      </div>
+      <content>
+        <section class="sectionE not-expanded">
+          <div class="container-fluid interview-content-card-h-s scheduler-calendar ">
+            <div class="row">
+              <div class="col-lg-8 mb-5">
+                <div class="card">
+                  <div class="card-body mb-5">
+                    <div class="col-md-12">
+                      <div class="form-group mb-4">
+                        <label for="formGroupExampleInput" class="font-weight-bold">Job name</label>
+                        <select class="custom-select" disabled>
+                          <option>Select Job</option>
+                          <option selected="" value="1">Project management</option>
+                          <option value="2">Sales</option>
+                          <option value="3">Marketing</option>
+                        </select>
+                      </div>
+                      <div class="form-group mb-4">
+                        <label for="formGroupExampleInput" class="font-weight-bold">Selected candidate</label>
+                        <br>
+                        <label>James Smith</label>
+                      </div>
+                      <div class="form-group mb-4">
+                        <label for="formGroupExampleInput" class="font-weight-bold">Interview type</label>
+                        <select class="custom-select">
+                          <option selected="">Video interview</option>
+                          <option value="1">Telephonic</option>
+                          <option value="2">Walk-in interview</option>
+                        </select>
+                      </div>
+                      <div class="form-group mb-4">
+                        <label for="formGroupExampleInput" class="font-weight-bold">Select participant(s)</label>
+                        <a href="#" data-toggle="modal" data-target="#select-member" data-keyboard="false" data-backdrop="static">
+                          <button type="button" class="btn btn-link"><i class="fas fa-plus-circle"></i>Add</button>
+                        </a> <br>
+                        <small class="text-muted font-italic">No member added yet!</small> </div>
+                      <div class="row">
+                        <div class="col-4">
+                          <div class="form-group mb-4">
+                            <label for="JobRef" class="font-weight-bold">Interview date</label>
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend"> <span class="input-group-text" id="basic-addon1"><i class="fas fa-calendar-alt"></i></span> </div>
+                              <input type="text" class="form-control" placeholder="Select date" aria-label="date" aria-describedby="basic-addon1">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="form-group mb-4">
+                            <label for="JobRef" class="font-weight-bold">Interview start time</label>
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend"> <span class="input-group-text" id="basic-addon1"><i class="far fa-clock"></i></span> </div>
+                              <input type="text" class="form-control" placeholder="Select time" aria-label="date" aria-describedby="basic-addon1">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-2">
+                          <div class="form-group mb-4">
+                            <label for="formGroupExampleInput" class="font-weight-bold">Duration</label>
+                            <div class="add-qs-dropdown dropdown dropdown-custom mr-4">
+                              <button class="btn btn-outline-secondary dropdown-toggle btn-sm" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span><i class="fas fa-clock mr-1"></i></span> 30 mins </button>
+                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 30px, 0px);"> <a class="dropdown-item" href="#">45 mins</a> <a class="dropdown-item" href="#">60 mins</a> </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-flex justify-content-between mt-4">
+                        <h5 class="mb-0 pt-2">Compose invite email</h5>
+                        <button type="button" class="btn btn-primary mini-btns" data-toggle="modal" data-target=".import-email-modal" data-keyboard="false" data-backdrop="static"><i class="fas fa-download"></i>Import email</button>
+                      </div>
+                      <hr>
+                      <div class="form-group mb-4">
+                        <label for="formGroupExampleInput" class="font-weight-bold">Email subject</label>
+                        <input type="text" class="form-control" placeholder="Enter subject for invite">
+                      </div>
+                      <div class="form-group mb-4">
+                        <label for="formGroupExampleInput" class="font-weight-bold">Email content</label>
+                        <div id="editor">
+                          <h2><br>
+                          </h2>
+                          <h2><span style="color: #000;">Interview Invite</span></h2>
+                          <p><br>
+                          </p>
+                          <p><span style="color: #000;">We would like to invite you to ...</span></p>
+                        </div>
+                        <div class="mt-3"> Placeholders <button type="button" class="ml-3 mini-btns btn btn-light border">[video interview URL]</button>
+                          <button type="button" class="ml-3 mini-btns btn btn-light border">[company_name]</button>
+                          <button type="button" class="ml-3 mini-btns btn btn-light border">[candidate_name]</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer"> <a href="interview-scheduler.html">
+                      <button type="button" class="btn btn-primary float-right">Send invite</button>
+                    </a> </div>
+                </div>
+              </div>
+              <div class="col-lg-4 sticky-panel-video-interview">
+                <div class="card ">
+                  <div class="card-header  ">
+                    <h5 class="pt-2 mb-0 ">My calendar</h5>
+                  </div>
+                  <div class="card-body calender-widget">
+                    <div id="calendar" class="calendar_modern">
+                      <div class="calendar">
+                        <div class="d-flex justify-content-center">
+                          <nav aria-label="Page navigation">
+                            <ul class="pagination justify-content-center mb-0">
+                              <li class="page-item mt-2"> <a class="" href="#" aria-label="Previous"> <i class="fas fa-caret-left mr-0"></i> <span class="sr-only">Previous</span> </a> </li>
+                              <label class="pl-5 pr-5 pt-2"><span class="font-weight-bold">May 2018</span></label>
+                              <li class="page-item mt-2"> <a class="" href="#" aria-label="Next"> <i class="fas fa-caret-right mr-0"></i><span class="sr-only">Next</span> </a> </li>
+                            </ul>
+                          </nav>
+                        </div>
+                        <div class="months">
+                          <div class="month">
+                            <div class="body">
+                              <div class="day_names"> <i>M</i> <i>T</i> <i>W</i> <i>T</i> <i>F</i> <i>S</i> <i>S</i> </div>
+                              <div class="days"> <b></b> <b></b> <b></b> <b></b> <b></b> <a href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">5</a> <a href="#">6</a> <a href="#">7</a> <a class="weekend" href="#">8</a> <a class="weekend" href="#">9</a> <a href="#">10</a> <a href="#">11</a> <a href="#" class="today">12</a> <a href="#">13</a> <a href="#">14</a> <a class="weekend" href="#">15</a> <a class="weekend" href="#">16</a> <a href="#">17</a> <a href="#">18</a> <a href="#">19</a> <a href="#">20</a> <a href="#">21</a> <a class="weekend" href="#">22</a> <a class="weekend" href="#">23</a> <a href="#">24</a> <a href="#">25</a> <a href="#">26</a> <a href="#">27</a> <a href="#">28</a> <a class="weekend" href="#">29</a> <a class="weekend" href="#">30</a> <a href="#">31</a> <s></s> <s></s> <s></s> <s></s> <s></s> <s></s> </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <div>
+                      <label class="title font-weight-bold bg-primary text-white w-100 pl-2">Agendas</label>
+                      <br>
+                      <label class="mb-0 pl-2">Sales Job</label>
+                      <br>
+                      <small class="text-muted pl-2">Interview scheduled with <strong>John Smith</strong> </small> <br>
+                      <small class="text-muted pl-2  pt-1"><i class="far fa-clock"></i>09:00 PM</small></div>
+                    <br>
+                    <div>
+                      <label class="mb-0 pl-2">Management Job</label>
+                      <br>
+                      <small class="text-muted pl-2">Interview scheduled with <strong>John Smith</strong> </small> <br>
+                      <small class="text-muted pl-2  pt-1"><i class="far fa-clock"></i>04:00 PM</small></div>
+                    <br>
+                    <div>
+                      <label class="mb-0 pl-2">Marketing Job</label>
+                      <br>
+                      <small class="text-muted pl-2">Interview scheduled with <strong>John Smith</strong> </small> <br>
+                      <small class="text-muted pl-2  pt-1"><i class="far fa-clock"></i>05:00 PM</small></div>
+                    <br>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--    Import Category Modal   -->
+            <div class="modal fade import-email-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Import email</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+                  </div>
+                  <div class="modal-body height-unset">
+                    <div id="accordion">
+                      <div class="card card-inner-qs mb-2">
+                        <div class="card-header pt-2 pb-2  pr-0" id="heading-1">
+                          <div class="d-flex justify-content-between">
+                            <div class="custom-control custom-radio pt-import-email">
+                              <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                              <label class="custom-control-label" for="customRadio1">Email template 1</label>
+                            </div>
+                            <div class="form-row">
+                              <div class="chevron ml-2 pt-import-email"> <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2"> </a> </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div id="collapse-2" class="collapse " data-parent="#accordion" aria-labelledby="heading-1" style="">
+                          <div class="card-body">
+                            <div class="form-group">
+                              <label for="formGroupExampleInput" class="font-weight-bold">Email subject</label>
+                              <p for="formGroupExampleInput">Interview invite</p>
+                            </div>
+                            <div class="form-group">
+                              <label for="formGroupExampleInput" class="font-weight-bold">Email content</label>
+                              <p for="formGroupExampleInput">We would like to invite you for the interview. </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="accordion">
+                      <div class="card card-inner-qs mb-2">
+                        <div class="card-header pt-2 pb-2  pr-0" id="heading-1">
+                          <div class="d-flex justify-content-between">
+                            <div class="custom-control custom-radio pt-import-email">
+                              <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                              <label class="custom-control-label" for="customRadio2">Email invite</label>
+                            </div>
+                            <div class="form-row">
+                              <div class="chevron ml-2 pt-import-email"> <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3"> </a> </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div id="collapse-3" class="collapse " data-parent="#accordion" aria-labelledby="heading-1" style="">
+                          <div class="card-body">
+                            <div class="form-group">
+                              <label for="formGroupExampleInput" class="font-weight-bold">Email subject</label>
+                              <p for="formGroupExampleInput">Interview invite</p>
+                            </div>
+                            <div class="form-group">
+                              <label for="formGroupExampleInput" class="font-weight-bold">Email content</label>
+                              <p for="formGroupExampleInput">We would like to invite you for the interview. </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Import</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--    Import Category Modal   -->
+          </div>
+        </section>
+      </content>
+    </main>
+    <!-- footer.njk -->
+    <footer role="contentinfo" class="">
+    </footer>
+    <!-- end footer.njk -->
+    <script src='assets/js/vendor/jquery-3.4.1.min.js'></script>
+    <script src='assets/js/jquery-ui.min.js'></script>
+    <script src='assets/js/vendor/bootstrap.bundle.min.js'></script>
+    <script src='assets/js/bootree.min.js'></script>
+    <script src='assets/js/quill.js'></script>
+    <script src='assets/js/snap.svg-min.js'></script>
+    <script src='assets/js/speekio-custom.js'></script>
+    <script src='assets/js/speekio-caller.js'></script>
+  </body>
+</html>

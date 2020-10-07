@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta.njk -->
+    <meta charset="utf-8">
+    <title>SpeekIO</title>
+    <!-- change this -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootree.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/quill.snow.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/apexcharts.css">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <script src="assets/js/apexcharts.min.js"></script>
+    <!-- end meta.njk -->
+  </head>
+  <body style="--primary:#1F3D5E; --secondary:#1F3D5E;">
+    <!-- header.njk -->
+    <nav class="navbar navbar-top navbar-expand-xl navbar-dark bg-white">
+      <div class="left-content"><a class="navbar-brand pt-0 pb-0 mr-4" href="index.html"><img src="assets/img/speekio-logo.svg" width="130"></a> <a href="javascript:void(0);"><img src="assets/img/drawer-menu.svg" class="icon icon-sidebar mr-3" width="25" class="mr-3" id="sidebarCollapse"> </a> </div>
+      <div class="right-content">
+        <!--<div class="dropdown " >
+      <button class="btn btn-sm" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <a href="#" class="text-white mr-3 notification"><i class="fas fa-bell fa-2x"></i> <span class="badge">99+</span></a>
+      </button>
+      <div class="dropdown-menu dropdown-menu-right pt-0 notification-dropdown" aria-labelledby="dropdownMenu2"  style="width: 250px;">
+        <li class="dropdown-item" ><strong><i class="fas fa-bell mr-1"></i>Your Notifications</strong></li>
+        <li class="dropdown-item" >3 candidates applied for Project Manager</li>
+        <li class="dropdown-item" >2 reviewers left feedback</li>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item text-primary" href="#">See all notifications</a> </div>
+    </div>-->
+        <div id="main" class="mr-2"> <span style="cursor:pointer" onclick="openNav()"> <a href="javascript:void(0);"> <i class="fas fa-users mr-0"></i><span class="font-weight-bold text-secondary ml-1">Team (4)</span> </a> </span> </div>
+        <div id="mySidenav" class="right-sidenav">
+          <div> <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="font-weight-bold ml-3 mb-2">Online members</div>
+          </div>
+          <a href="#"><i class="fas fa-circle text-success mr-2"></i>John Smith</a> <a href="#"><i class="fas fa-circle text-success mr-2"></i>Adolph Blaine</a> <a href="#"><i class="fas fa-circle text-success mr-2"></i>Sherman Thomas</a> <a href="#"><i class="fas fa-circle text-success mr-2"></i>Adolph Blaine</a>
+          <hr>
+          <div class="font-weight-bold ml-3 mt-4  mb-2 ">Offline members</div>
+          <a href="#" class="text-muted"><i class="far fa-circle text-muted mr-2"></i>Sara Smith</a> <a href="#" class="text-muted"><i class="far fa-circle text-muted mr-2"></i>Finge Smith</a>
+        </div>
+        <div class="dropdown ">
+          <button class="btn btn-sm" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="" href="#"><img src="assets/img/img_avatar.png" alt="Avatar" class="avatar"></a>
+          </button>
+          <div class="dropdown-menu dropdown-menu-right pt-0" aria-labelledby="dropdownMenuButton">
+            <li class="dropdown-item " href="#">
+              <div class="media "> <img class="avatar-l align-self-start mr-2" src="assets/img/img_avatar.png" alt="avatar-xl">
+                <div class="media-body">
+                  <h6 class="top-profile pt-2 mb-0">James Smith</h6>
+                  <small>Hiring Manager</small>
+                </div>
+              </div>
+            </li>
+            <li class="dropdown-item"> <a href="my-profile.html"> View profile</a> </li>
+            <li class="dropdown-item" data-toggle="modal" data-target="#changePassword" data-keyboard="false" data-backdrop="static"> <a href="#"> Change Password</a> </li>
+            <li class="dropdown-item"> <a href="#">Logout</a> </li>
+          </div>
+        </div>
+      </div>
+      <!-- Change Password Modal -->
+      <div class="modal fade" id="changePassword" tabindex="-1" role="dialog" aria-labelledby="changePassword" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+            </div>
+            <div class="modal-body">
+              <div class="col-md-12 mb-3">
+                <label for="validationCustom05">Current password<span class="text-danger ml-1">*</span></label>
+                <input type="password" class="form-control" id="validationCustom05" placeholder="Your current password">
+                <div class="valid-feedback"> Looks good! </div>
+              </div>
+              <div class="col-md-12 mb-3">
+                <label for="validationCustom05">New password<span class="text-danger ml-1">*</span></label>
+                <input type="password" class="form-control" id="validationCustom05" placeholder="Your new password">
+                <div class="valid-feedback"> Looks good! </div>
+              </div>
+              <div class="col-md-12 mb-3">
+                <label for="validationCustom05">New Password confirmation<span class="text-danger ml-1">*</span></label>
+                <input type="password" class="form-control" id="validationCustom05" placeholder="Your new password again">
+                <div class="valid-feedback"> Looks good! </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Change Password Modal -->
+    </nav>
+    <!-- end header.njk -->
+    <main>
+      <nav class="sidebar">
+        <ul>
+          <li class=""> <a href="index.html"> <span class="icon" data-toggle="tooltip" data-placement="right" title="Dashboard" data-delay='{"show":"700"}'>
+                <svg>
+                  <use xlink:href="assets/img/project-icons.svg#dashboard"></use>
+                </svg>
+              </span> dashboard </a> </li>
+          <li class=""> <a href="job-manager.html"> <span class="icon" data-toggle="tooltip" data-placement="right" title="Job Manager" data-delay='{"show":"700"}'>
+                <svg>
+                  <use xlink:href="assets/img/project-icons.svg#job-manager"></use>
+                </svg>
+              </span> Job Manager </a> </li>
+          <li class=""> <a href="library.html"> <span class="icon" data-toggle="tooltip" data-placement="right" title="Job Manager" data-delay='{"show":"700"}'>
+                <svg>
+                  <use xlink:href="assets/img/project-icons.svg#library"></use>
+                </svg>
+              </span> Library </a> </li>
+          <li class=""> <a href="candidate-manager.html"> <span class="icon" data-toggle="tooltip" data-placement="right" title="Candidate Manager" data-delay='{"show":"700"}'>
+                <svg>
+                  <use xlink:href="assets/img/project-icons.svg#candidate-manager"></use>
+                </svg>
+              </span> Candidate Manager </a> </li>
+          <li class=""> <a href="interview-scheduler.html"> <span class="icon" data-toggle="tooltip" data-placement="right" title=" Interview Scheduler" data-delay='{"show":"700"}'>
+                <svg>
+                  <use xlink:href="assets/img/project-icons.svg#video-interview"></use>
+                </svg>
+              </span> Interview Scheduler </a> </li>
+          <li class=""> <a href="users.html"> <span class="icon" data-toggle="tooltip" data-placement="right" title=" Users & Roles " data-delay='{"show":"700"}'>
+                <svg>
+                  <use xlink:href="assets/img/project-icons.svg#users"></use>
+                </svg>
+              </span> Users & Roles </a> </li>
+          <li class="active"> <a href="settings.html"> <span class="icon" data-toggle="tooltip" data-placement="right" title="Configurations" data-delay='{"show":"700"}'>
+                <svg>
+                  <use xlink:href="assets/img/project-icons.svg#settings"></use>
+                </svg>
+              </span> Configurations </a> </li>
+          <!--  
+       <li class=""> <a href="invoice-manager.html"> <span class="icon">
+      <svg>
+        <use xlink:href="assets/img/project-icons.svg#invoice"></use>
+      </svg>
+      </span> Invoice manager </a> </li>
+    
+    
+    <li class=""> <a href="reports.html"> <span class="icon">
+      <svg>
+        <use xlink:href="assets/img/project-icons.svg#reports"></use>
+      </svg>
+      </span> Reports </a> </li>  -->
+        </ul>
+      </nav>
+      <div class="bread-crumb">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li> <a href="javascript: history.go(-1)">
+                <svg class="back-btn">
+                  <use xlink:href="assets/img/project-icons.svg#go-back"></use>
+                </svg>
+              </a> </li>
+            <li class="breadcrumb-item active"> Configurations </li>
+          </ol>
+        </nav>
+      </div>
+      <content>
+        <section class="sectionE not-expanded">
+          <div class="container settings-wrapper">
+            <div class="card name-title-card mt-2 mb-2">
+              <div class="card-header">
+                <h5 class="card-title pt-2 mb-0 text-secondary">Settings</h5>
+              </div>
+              <div class="card-body ">
+                <div class="row align-items-start mb-5">
+                  <div class="col">
+                    <label class="form-label font-weight-bold">Brand color</label>
+                    <p class="small text-muted">Choose your brand color from the pallette to be shown to candidates at test pages</p>
+                  </div>
+                  <div class="col-sm-12 col-md-12 col-lg-8">
+                    <div class="card mb-4" style="width: 8rem;">
+                      <div class="color-bucket"></div>
+                      <div class="body-wrap">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="#1F3D5E">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row align-items-start mb-5">
+                  <div class="col">
+                    <label class="form-label font-weight-bold">Company logo</label>
+                    <p class="small text-muted">Upload your company logo to be shown to candidates at test pages</p>
+                  </div>
+                  <div class="col-sm-12 col-md-12 col-lg-8">
+                    <div class="form-group">
+                      <div class="logo-preview"> <img src="assets/img/no-img.svg" class="logo"> </div>
+                      <input type="file" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="row align-items-start mb-5">
+                  <div class="col">
+                    <label class="form-label  font-weight-bold">Working hours</label>
+                    <p class="small text-muted">Define working hours of your organisation</p>
+                  </div>
+                  <div class="col-sm-12 col-md-12 col-lg-8">
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="form-group mb-4">
+                          <label for="JobRef" class="font-weight-bold">Start time</label>
+                          <div class="input-group mb-3">
+                            <div class="input-group-prepend"> <span class="input-group-text" id="basic-addon1"><i class="far fa-clock"></i></span> </div>
+                            <input type="text" class="form-control" placeholder="Select time" aria-label="date" aria-describedby="basic-addon1">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-group mb-4">
+                          <label for="JobRef" class="font-weight-bold">End time</label>
+                          <div class="input-group mb-3">
+                            <div class="input-group-prepend"> <span class="input-group-text" id="basic-addon1"><i class="far fa-clock"></i></span> </div>
+                            <input type="text" class="form-control" placeholder="Select time" aria-label="date" aria-describedby="basic-addon1">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row align-items-start mb-5">
+                  <div class="col">
+                    <label class="form-label  font-weight-bold">Languages</label>
+                    <p class="small text-muted">Select the languages that should be supported by portal</p>
+                  </div>
+                  <div class="col-sm-12 col-md-12 col-lg-8">
+                    <div class="custom-control custom-radio mb-2">
+                      <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" checked>
+                      <label class="custom-control-label" for="customRadioInline1">English</label>
+                    </div>
+                    <div class="custom-control custom-radio mb-2 ">
+                      <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                      <label class="custom-control-label" for="customRadioInline2">Danish</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row align-items-start mb-5">
+                  <div class="col">
+                    <label class="form-label  font-weight-bold">Your plan</label>
+                    <p class="small text-muted">Select the languages that should be supported by portal</p>
+                  </div>
+                  <div class="col-sm-12 col-md-12 col-lg-8">
+                    <div class="card  mb-3 shadow-none plan-selected w-50">
+                      <div class="card-body">
+                        <p class="card-text-title">Starter Package</p>
+                        <p class="mb-1"><span class="jobs-open-label font-weight-bold">5</span> <span class="text-muted">active jobs / month</span></p>
+                        <div><span class=" font-weight-bold ">1,995.00 DKK / month</span> </div>
+                        <small class="text-muted">0.80 DKK / month per saved candidate</small> <br class="mb-3">
+                      </div>
+                      <div class="d-flex justify-content-end"> <a href="#" data-toggle="modal" data-target="#plan-change" data-keyboard="false" data-backdrop="static" class="float-right pr-3 pb-3">Change Plan</a> </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer text-muted">
+                <button type="button" class="btn btn-link">Cancel</button>
+                <button type="button" class="btn btn-primary float-right">Save</button>
+              </div>
+            </div>
+          </div>
+          <!-- Modal plan change -->
+          <div class="modal fade" id="plan-change" tabindex="-1" role="dialog" aria-labelledby="plan-change" aria-hidden="true">
+            <div class="modal-dialog modal-xl plan-change-modal" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Change plan</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+                </div>
+                <div class="modal-body modal-body-unset-height">
+                  <label class="form-label  mb-3">Please select your preferred plan</label>
+                  <div class="d-flex flex-wrap ">
+                    <div class="card  mb-3 shadow-none">
+                      <div class="card-body">
+                        <p class="card-text-title">Free Package</p>
+                        <p class="mb-1"><span class="jobs-open-label font-weight-bold">1 </span> <span class="text-muted">active job for 30 days</span></p>
+                        <div><span class=" font-weight-bold ">0 DKK for 30 days</span> </div>
+                        <br class="mb-3">
+                      </div>
+                    </div>
+                    <div class="card  mb-3 shadow-none plan-selected">
+                      <div class="card-body">
+                        <p class="card-text-title">Starter Package</p>
+                        <p class="mb-1"><span class="jobs-open-label font-weight-bold">5 </span> <span class="text-muted">active jobs / month</span></p>
+                        <div><span class=" font-weight-bold ">1,995.00 DKK / month</span> </div>
+                        <small class="text-muted">0.80 DKK / month per saved candidate</small> <br class="mb-3">
+                      </div>
+                    </div>
+                    <div class="card  mb-3 shadow-none">
+                      <div class="card-body">
+                        <p class="card-text-title">Professional Package</p>
+                        <p class="mb-1"><span class="jobs-open-label font-weight-bold">20 </span> <span class="text-muted">active jobs / month</span></p>
+                        <div><span class=" font-weight-bold ">2,995.00 DKK / month</span> </div>
+                        <small class="text-muted">0.80 DKK / month per saved candidate</small> <br class="mb-3">
+                      </div>
+                    </div>
+                    <div class="card  mb-3 shadow-none">
+                      <div class="card-body">
+                        <p class="card-text-title">Recruiter Package</p>
+                        <p class="mb-1"><span class="jobs-open-label font-weight-bold">999+ </span> <span class="text-muted">active jobs / month</span></p>
+                        <div><span class=" font-weight-bold ">4,995.00 DKK / month</span> </div>
+                        <small class="text-muted">0.80 DKK / month per saved candidate</small> <br class="mb-3">
+                      </div>
+                    </div>
+                  </div>
+                  <span class="text-muted"><i class="far fa-question-circle"></i>FAQs</span>
+                  <ol class="pl-c1">
+                    <small>
+                      <li class="text-muted mt-2 ">If a candidate is not deleted within 30-days, you will be charged 0.80 DKK</li>
+                    </small> <small>
+                      <li class="text-muted">Optional full setup of XX categories, company introduction, closing remarks, GDPR, T&amp;C, as well as XX hours of training in the system</li>
+                    </small>
+                  </ol>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Update plan</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal plan change -->
+        </section>
+      </content>
+    </main>
+    <!-- footer.njk -->
+    <footer role="contentinfo" class="">
+    </footer>
+    <!-- end footer.njk -->
+    <script src='assets/js/vendor/jquery-3.4.1.min.js'></script>
+    <script src='assets/js/jquery-ui.min.js'></script>
+    <script src='assets/js/vendor/bootstrap.bundle.min.js'></script>
+    <script src='assets/js/bootree.min.js'></script>
+    <script src='assets/js/quill.js'></script>
+    <script src='assets/js/snap.svg-min.js'></script>
+    <script src='assets/js/speekio-custom.js'></script>
+    <script src='assets/js/speekio-caller.js'></script>
+  </body>
+</html>

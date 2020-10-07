@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta.njk -->
+    <meta charset="utf-8">
+    <title>SpeekIO</title>
+    <!-- change this -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootree.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/quill.snow.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/apexcharts.css">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <script src="assets/js/apexcharts.min.js"></script>
+    <!-- end meta.njk -->
+  </head>
+  <body style="--primary:#1F3D5E; --secondary:#1F3D5E;">
+    <!-- header.njk -->
+    <nav class="navbar navbar-top navbar-expand-xl navbar-dark bg-white">
+      <div class="left-content"><a class="navbar-brand pt-0 pb-0 mr-4" href="#"><img src="assets/img/speekio-logo.svg" width="130"></a> </div>
+      <!--<div class="right-content"> <small class="text-white text-center mb-1 ">
+    <button type="button" class="btn btn-light btn-sm mt-1">Report issue</button>
+    </small> </div>-->
+    </nav>
+    <!-- end header.njk -->
+    <main>
+      <section class="sectionE not-expanded">
+        <div class="container pt-4 candidate-wrapper">
+          <div class="card name-title-card">
+            <div class="card-header sticky-candidate-header">
+              <div class="row ml-0 mr-0 pt-2">
+                <div class="test-header-title">
+                  <h5>Analytical and technical Questions</h5>
+                </div>
+                <div class="ml-auto row mr-0"> <a class="text-muted" data-toggle="modal" data-target="#jump-qs"> <i class="fas font-aws-jump fa-th mr-5" data-toggle="tooltip" data-placement="top" title="Jump to questions"></i> </a>
+                  <input type="hidden" id="set-time" value="1" />
+                  <div id="countdown"><i class="fas fa-clock countdown-label"></i>
+                    <div id='tiles' class="color-full"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <p class="font-weight-bold"> Please select correct answer </p>
+              <p>1. Seven piano students—T, U, V, W, X, Y, and Z—are to give a recital, and their instructor is deciding the order in which they will perform. Each student will play exactly one piece, a piano solo. In deciding the order of performance, the instructor must observe the following restrictions: </p>
+              <!--<div class="row mb-4 ml-0 mr-0">
+            <div class="imghover" > <img src="assets/img/test.png" class="media-thumbnail-custom" alt="...">
+              <div class="overlay"></div>
+            </div>
+            <div class="imghover"> <img src="assets/img/video-thumbnail-play.svg" class="media-thumbnail-custom" alt="..."> </div>
+            <div class="imghover"> <img src="assets/img/card-bg-1.jpg" class="media-thumbnail-custom" alt="...">
+              <div class="overlay"></div>
+            </div>
+          </div>-->
+              <div class="row mb-4 ml-0 mr-0">
+                <div class="qs-img"> <img src="assets/img/sample-qs.jpg" class="img-fluid img-thumbnail" alt="..."> </div>
+              </div>
+              <div class="custom-control custom-radio mb-2">
+                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                <label class="custom-control-label p-label" for="customRadio1">X cannot play first or second.</label>
+                <div class="imghover"> <img src="assets/img/test.png" class="media-thumbnail-custom" alt="...">
+                  <div class="overlay"></div>
+                </div>
+              </div>
+              <div class="custom-control custom-radio mb-2">
+                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                <label class="custom-control-label p-label" for="customRadio2">W cannot play until X has played.</label>
+              </div>
+              <div class="custom-control custom-radio mb-2">
+                <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                <label class="custom-control-label p-label" for="customRadio3">Neither T nor Y can play seventh.</label>
+              </div>
+            </div>
+            <div class="card-footer"> <a href="" class="align-text-top" data-toggle="modal" data-target="#exampleModal"> <i class="fas fa-info-circle"></i>Read instructions</a> </div>
+          </div>
+        </div>
+        <nav class="navbar fixed-bottom wizard-footer bg-light justify-content-end">
+          <form class="form-inline my-2 my-lg-0">
+            <a href="candidate-view-7.html">
+              <button type="button" class="btn btn-danger mr-3">Skip</button>
+            </a> <a href="#">
+              <button type="button" class="btn btn-outline-primary mr-3" disabled>Back</button>
+            </a> <a href="candidate-view-7.html">
+              <button type="button" class="btn btn-primary">Next</button>
+            </a>
+          </form>
+        </nav>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Instructions!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+              </div>
+              <div class="modal-body modal-body-unset-height">
+                <p> A. Category: Analytical Questions </p>
+                <p>1. There are 5 Analytical Questions which is limited to time bound. 2. You must need to answer them in given time frame. 3. If you are unable to answer in given time then you must proceed to next question. 4. You can move around in this category only in given time. 5. If you moved to other category then you can't go to previous category even you have time left.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal jump menu -->
+        <div class="modal fade" id="jump-qs" tabindex="-1" role="dialog" aria-labelledby="jump-qs-label" aria-hidden="true">
+          <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Analytical and technical Questions</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+              </div>
+              <div class="modal-body modal-body-unset-height">
+                <div class="d-flex justify-content-end mb-2">
+                  <div class="color-bullet-done"></div>
+                  <span class="mr-4">Answered</span>
+                  <div class="color-bullet-skipped"></div>
+                  <span>Not Answered</span>
+                </div>
+                <div class="mb-3">
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-start test-paging d-flex flex-wrap border">
+                      <li class="page-item done-qs"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link " href="#">3</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link" href="#">4</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link " href="#">5</a></li>
+                      <li class="page-item done-qs"><a class="page-link" href="#">6</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link" href="#">7</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link " href="#">8</a></li>
+                      <li class="page-item done-qs"><a class="page-link" href="#">9</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link" href="#">10</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link " href="#">11</a></li>
+                      <li class="page-item done-qs"><a class="page-link" href="#">12</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link" href="#">13</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link " href="#">14</a></li>
+                      <li class="page-item done-qs"><a class="page-link" href="#">15</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link" href="#">16</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link " href="#">17</a></li>
+                      <li class="page-item done-qs"><a class="page-link" href="#">18</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link" href="#">19</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link " href="#">20</a></li>
+                      <li class="page-item done-qs"><a class="page-link" href="#">21</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link" href="#">22</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link " href="#">23</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link" href="#">24</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link " href="#">25</a></li>
+                      <li class="page-item done-qs"><a class="page-link" href="#">26</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link" href="#">27</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link " href="#">28</a></li>
+                      <li class="page-item done-qs"><a class="page-link" href="#">29</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link" href="#">30</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link " href="#">31</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link" href="#">32</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link " href="#">33</a></li>
+                      <li class="page-item done-qs"><a class="page-link" href="#">34</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link" href="#">35</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link " href="#">36</a></li>
+                      <li class="page-item done-qs"><a class="page-link" href="#">37</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link" href="#">38</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link " href="#">39</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link" href="#">40</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link " href="#">41</a></li>
+                      <li class="page-item done-qs"><a class="page-link" href="#">42</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link" href="#">43</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link " href="#">44</a></li>
+                      <li class="page-item done-qs"><a class="page-link" href="#">45</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link" href="#">46</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link " href="#">47</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link" href="#">48</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link " href="#">49</a></li>
+                      <li class="page-item done-qs"><a class="page-link" href="#">50</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link" href="#">51</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link " href="#">52</a></li>
+                      <li class="page-item done-qs"><a class="page-link" href="#">53</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link" href="#">54</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link " href="#">55</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link" href="#">56</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link " href="#">57</a></li>
+                      <li class="page-item done-qs"><a class="page-link" href="#">58</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link" href="#">59</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link " href="#">60</a></li>
+                      <li class="page-item done-qs"><a class="page-link" href="#">61</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link" href="#">62</a></li>
+                      <li class="page-item not-done-qs"><a class="page-link " href="#">63</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer.njk -->
+    <footer role="contentinfo" class="">
+    </footer>
+    <!-- end footer.njk -->
+    <script src='assets/js/vendor/jquery-3.4.1.min.js'></script>
+    <script src='assets/js/jquery-ui.min.js'></script>
+    <script src='assets/js/vendor/bootstrap.bundle.min.js'></script>
+    <script src='assets/js/bootree.min.js'></script>
+    <script src='assets/js/quill.js'></script>
+    <script src='assets/js/snap.svg-min.js'></script>
+    <script src='assets/js/speekio-custom.js'></script>
+    <script src='assets/js/speekio-caller.js'></script>
+  </body>
+</html>

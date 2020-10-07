@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta.njk -->
+    <meta charset="utf-8">
+    <title>SpeekIO</title>
+    <!-- change this -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootree.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/quill.snow.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/apexcharts.css">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <script src="assets/js/apexcharts.min.js"></script>
+    <!-- end meta.njk -->
+  </head>
+  <body style="--primary:#1F3D5E; --secondary:#1F3D5E;">
+    <!-- header.njk -->
+    <nav class="navbar navbar-top navbar-expand-xl navbar-dark bg-white">
+      <div class="left-content"><a class="navbar-brand pt-0 pb-0 mr-4" href="#"><img src="assets/img/speekio-logo.svg" width="130"></a> </div>
+      <!--<div class="right-content"> <small class="text-white text-center mb-1 ">
+    <button type="button" class="btn btn-light btn-sm mt-1">Report issue</button>
+    </small> </div>-->
+    </nav>
+    <!-- end header.njk -->
+    <main>
+      <section class="sectionE not-expanded">
+        <div class="container pt-4 candidate-wrapper">
+          <div class="card name-title-card">
+            <div class="card-header sticky-candidate-header">
+              <div class="d-flex justify-content-between pt-2">
+                <div class="test-header-title">
+                  <h5>Your profile</h5>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="row align-items-start mb-5">
+                <div class="col">
+                  <label class="form-label font-weight-bold">Personal Information</label>
+                  <p class="small text-muted">Please complete your profile by providing the following information</p>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-8">
+                  <div class="form-group mb-4">
+                    <label for="exampleFormControlInput1">Please upload your photo<span class="text-danger ml-1">*</span></label>
+                    <div class="avatar-upload">
+                      <div class="avatar-edit">
+                        <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                        <label for="imageUpload"></label>
+                      </div>
+                      <div class="avatar-preview">
+                        <div id="imagePreview" style="background-image: url(assets/img/img_avatar.png);"> </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-4">
+                    <label for="formGroupExampleInput">Full Name<span class="text-danger ml-1">*</span></label>
+                    <input type="text" class="form-control" placeholder="Please enter your first name">
+                  </div>
+                  <div class="form-group mb-4">
+                    <label for="formGroupExampleInput">Email<span class="text-danger ml-1">*</span></label>
+                    <input type="text" class="form-control" placeholder="Please enter your email ID">
+                  </div>
+                  <div class="form-group mb-4">
+                    <label for="formGroupExampleInput">Street Address<span class="text-danger ml-1">*</span></label>
+                    <input type="text" class="form-control" placeholder="Please enter your address">
+                  </div>
+                  <div class="form-group mb-4">
+                    <label for="formGroupExampleInput">Street Address, line 2</label>
+                    <input type="text" class="form-control" placeholder="Please enter your address">
+                  </div>
+                  <div class="form-group mb-4">
+                    <label for="formGroupExampleInput">Zip or postal code<span class="text-danger ml-1">*</span></label>
+                    <input type="text" class="form-control" placeholder="Please enter your address">
+                  </div>
+                  <div class="form-group mb-4">
+                    <label for="formGroupExampleInput">Phone<span class="text-danger ml-1">*</span></label>
+                    <input type="text" class="form-control" placeholder="Please enter your mobile number">
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="formGroupExampleInput">Gender</label>
+                    <br>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                      <label class="custom-control-label l-pt" for="customRadio1">Male</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                      <label class="custom-control-label l-pt" for="customRadio2">Female</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                      <label class="custom-control-label l-pt" for="customRadio3">Other</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
+                      <label class="custom-control-label l-pt" for="customRadio4">Prefer not to answer</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row align-items-start mb-5">
+                <div class="col">
+                  <label class="form-label font-weight-bold">Introduction</label>
+                  <p class="small text-muted">Please introduce yourself by using your cam.<br>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-8">
+                  <div class="form-group mb-4">
+                    <button type="button" class="btn btn-primary btn-sm mb-2" data-toggle="modal" data-target="#video-record-modal" data-keyboard="false" data-backdrop="static"><i class="fas fa-video mr-2"></i>Record video</button>
+                    <br>
+                    <span class="text-muted">Time limit: 2mins</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="row align-items-start mb-5">
+                <div class="col">
+                  <label class="form-label font-weight-bold">Upload documents</label>
+                  <p class="small text-muted">Please upload your documents e.g. cv, cover letter etc.</p>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-8">
+                  <div class="form-group mb-4">
+                    <label for="formGroupExampleInput">Attach CV / Resume <span class="text-danger ml-1">*</span></label>
+                    <br>
+                    <button type="button" class="btn btn-primary btn-sm" disabled>Upload</button>
+                    <p class="text-primary"><small><span>My_resume.pdf</span></small><a href="#" class="text-danger"><i class="fas fa-times-circle ml-2" aria-hidden="true"></i></a></p>
+                  </div>
+                  <div class="form-group mb-4">
+                    <label for="formGroupExampleInput">Attach cover letter<span class="text-danger ml-1">*</span> </label>
+                    <br>
+                    <button type="button" class="btn btn-primary btn-sm mb-2 " disabled>Upload</button>
+                    <p class="text-primary"><small><span>My_cover-letter.pdf</span></small><a href="#" class="text-danger"><i class="fas fa-times-circle ml-2" aria-hidden="true"></i></a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="navbar fixed-bottom wizard-footer bg-light justify-content-end">
+          <form class="form-inline my-2 my-lg-0 ">
+            <a href="candidate-view-3.html">
+              <button type="button" class="btn btn-outline-primary mr-3">Back</button>
+            </a> <a href="candidate-view-5.html">
+              <button type="button" class="btn btn-primary">Next</button>
+            </a>
+          </form>
+        </nav>
+        <!--  MODAL -->
+        <div class="modal fade" tabindex="-1" role="dialog" id="video-record-modal">
+          <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Record video</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+              </div>
+              <div class="modal-body">
+                <div class="d-flex justify-content-center">
+                  <video class="border" width="100%"></video>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-lg btn-secondary" data-toggle="tooltip" data-placement="top" title="Play recording"><i class="fas fa-play-circle"></i></button>
+                    <button type="button" class="btn btn-lg  btn-secondary" data-toggle="tooltip" data-placement="top" title="Stop recording"><i class="fas fa-stop-circle"></i></button>
+                    <button type="button" class="btn btn-lg  btn-secondary" data-toggle="tooltip" data-placement="top" title="Start recording"><i class="fas fa-video"></i></button>
+                    <button type="button" class="btn btn-lg  btn-primary" data-toggle="tooltip" data-placement="top" title="Record again"><i class="fas fa-undo-alt"></i></button>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  MODAL -->
+      </section>
+    </main>
+    <!-- footer.njk -->
+    <footer role="contentinfo" class="">
+    </footer>
+    <!-- end footer.njk -->
+    <script src='assets/js/vendor/jquery-3.4.1.min.js'></script>
+    <script src='assets/js/jquery-ui.min.js'></script>
+    <script src='assets/js/vendor/bootstrap.bundle.min.js'></script>
+    <script src='assets/js/bootree.min.js'></script>
+    <script src='assets/js/quill.js'></script>
+    <script src='assets/js/snap.svg-min.js'></script>
+    <script src='assets/js/speekio-custom.js'></script>
+    <script src='assets/js/speekio-caller.js'></script>
+  </body>
+</html>

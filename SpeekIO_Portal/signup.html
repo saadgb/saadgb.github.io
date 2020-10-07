@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta.njk -->
+    <meta charset="utf-8">
+    <title>SpeekIO</title>
+    <!-- change this -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootree.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/quill.snow.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/apexcharts.css">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <script src="assets/js/apexcharts.min.js"></script>
+    <!-- end meta.njk -->
+  </head>
+  <body style="--primary:#1F3D5E; --secondary:#1F3D5E;">
+    <main>
+      <content class="p-0">
+        <section style="height:auto" class="signup">
+          <div class=" container pt-5 mb-3">
+            <h1 class="text-center  text-white"> <img src="assets/img/speekio-logo-w.svg" width="150" class="logo-sm"></h1>
+          </div>
+          <div class="container d-flex justify-content-center">
+            <div class="signup-container">
+              <div class="d-flex">
+                <div class="card w-100 border-r-flat">
+                  <div class="card-body">
+                    <h5 class="card-title">Sign up</h5>
+                    <p class="text-muted">Welcome! Please fill mandatory fields below</p>
+                    <form class="p-2 needs-validation" novalidate>
+                      <div class="form-row">
+                        <div class="col-md-12 mb-3">
+                          <label for="validationCustom01">First name<span class="text-danger ml-1">*</span></label>
+                          <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
+                          <div class="valid-feedback"> Looks good! </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <label for="validationCustom02">Last name<span class="text-danger ml-1">*</span></label>
+                          <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+                          <div class="valid-feedback"> Looks good! </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <label for="validationCustomUsername">Username<span class="text-danger ml-1">*</span></label>
+                          <div class="input-group">
+                            <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                            <div class="invalid-feedback"> Please choose a username. </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <label for="validationCustom03">Email<span class="text-danger ml-1">*</span></label>
+                          <input type="email" class="form-control" id="validationCustom03" placeholder="Email" value="xyz@domain.abc" disabled>
+                          <div class="valid-feedback"> Looks good! </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <label for="validationCustom04">Phone<span class="text-danger ml-1">*</span></label>
+                          <input type="number" class="form-control" id="validationCustom04" placeholder="Cell number">
+                          <div class="valid-feedback"> Looks good! </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <label for="validationCustom05">Password<span class="text-danger ml-1">*</span></label>
+                          <input type="password" class="form-control" id="validationCustom05" placeholder="Your new password">
+                          <div class="valid-feedback"> Looks good! </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <label for="validationCustom06">Confrim Password<span class="text-danger ml-1">*</span></label>
+                          <input type="password" class="form-control" id="validationCustom06" placeholder="Your new password">
+                          <div class="valid-feedback"> Looks good! </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input " id="customCheck1">
+                          <label class="custom-control-label text-muted mt-2" for="customCheck1">I agree to the SpeekIO <a href="terms.html" target="_blank" class="text-primary" data-toggle="modal" data-target=".bd-terms-modal-xl">Terms of Agreement</a></label>
+                        </div>
+                      </div>
+                      <div class="text-center mt-4"> <a href="#" id="showToast">
+                          <button class="btn btn-primary w-100" type="submit"><span class="spinner-grow spinner-grow-sm mr-2" role="status" aria-hidden="true"></span> Get Started with SpeekIO </button>
+                        </a> </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="card plan-summary-card border-l-flat">
+                  <div class="card-body">
+                    <h5 class="card-title ">Plan summary</h5>
+                    <h6 class=" mb-4 text-muted font-weight-normal">You have selected the following plan</h6>
+                    <div class="card  mb-3 shadow-none plan-selected">
+                      <div class="card-body">
+                        <p class="card-text-title">Starter Package</p>
+                        <p class="mb-1"><span class="jobs-open-label font-weight-bold">5</span> <span class="text-muted">active jobs / month</span></p>
+                        <div><span class=" font-weight-bold ">1,995.00 DKK / month</span> </div>
+                        <small class="text-muted">0.80 DKK / month per saved candidate</small> <br class="mb-3">
+                      </div>
+                      <div class="d-flex justify-content-end"> <a href="#" data-toggle="modal" data-target="#plan-change" data-keyboard="false" data-backdrop="static" class="float-right pr-3 pb-3">Change Plan</a> </div>
+                    </div>
+                    <span class="text-muted"><i class="far fa-question-circle"></i>FAQs</span>
+                    <ol class="pl-c1">
+                      <small>
+                        <li class="text-muted mt-2 mb-2">If a candidate is not deleted within 30-days, you will be charged 0.80 DKK</li>
+                      </small> <small>
+                        <li class="text-muted">Optional full setup of XX categories, company introduction, closing remarks, GDPR, T&C, as well as XX hours of training in the system</li>
+                      </small>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+              <div class="text-muted mt-3 d-flex justify-content-center">
+                <p class="mr-2 text-white">Already a member?</p>
+                <a href="login.html" class="text-white underline">Login here<i class=" ml-1 fas fa-long-arrow-alt-right align-middle"></i> </a>
+              </div>
+            </div>
+            <!-- Modal plan change -->
+            <div class="modal fade" id="plan-change" tabindex="-1" role="dialog" aria-labelledby="plan-change" aria-hidden="true">
+              <div class="modal-dialog modal-xl plan-change-modal" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Change plan</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+                  </div>
+                  <div class="modal-body modal-body-unset-height">
+                    <label class="form-label  mb-3">Please select your preferred plan</label>
+                    <div class="d-flex flex-wrap ">
+                      <div class="card  mb-3 shadow-none">
+                        <div class="card-body">
+                          <p class="card-text-title">Free Package</p>
+                          <p class="mb-1"><span class="jobs-open-label font-weight-bold">1 </span> <span class="text-muted">active job for 30 days</span></p>
+                          <div><span class=" font-weight-bold ">0 DKK for 30 days</span> </div>
+                          <br class="mb-3">
+                        </div>
+                      </div>
+                      <div class="card  mb-3 shadow-none plan-selected">
+                        <div class="card-body">
+                          <p class="card-text-title">Starter Package</p>
+                          <p class="mb-1"><span class="jobs-open-label font-weight-bold">5 </span> <span class="text-muted">active jobs / month</span></p>
+                          <div><span class=" font-weight-bold ">1,995.00 DKK / month</span> </div>
+                          <small class="text-muted">0.80 DKK / month per saved candidate</small> <br class="mb-3">
+                        </div>
+                      </div>
+                      <div class="card  mb-3 shadow-none">
+                        <div class="card-body">
+                          <p class="card-text-title">Professional Package</p>
+                          <p class="mb-1"><span class="jobs-open-label font-weight-bold">20 </span> <span class="text-muted">active jobs / month</span></p>
+                          <div><span class=" font-weight-bold ">2,995.00 DKK / month</span> </div>
+                          <small class="text-muted">0.80 DKK / month per saved candidate</small> <br class="mb-3">
+                        </div>
+                      </div>
+                      <div class="card  mb-3 shadow-none">
+                        <div class="card-body">
+                          <p class="card-text-title">Recruiter Package</p>
+                          <p class="mb-1"><span class="jobs-open-label font-weight-bold">999+ </span> <span class="text-muted">active jobs / month</span></p>
+                          <div><span class=" font-weight-bold ">4,995.00 DKK / month</span> </div>
+                          <small class="text-muted">0.80 DKK / month per saved candidate</small> <br class="mb-3">
+                        </div>
+                      </div>
+                    </div>
+                    <span class="text-muted"><i class="far fa-question-circle"></i>FAQs</span>
+                    <ol class="pl-c1">
+                      <small>
+                        <li class="text-muted mt-2 ">If a candidate is not deleted within 30-days, you will be charged 0.80 DKK</li>
+                      </small> <small>
+                        <li class="text-muted">Optional full setup of XX categories, company introduction, closing remarks, GDPR, T&amp;C, as well as XX hours of training in the system</li>
+                      </small>
+                    </ol>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Update plan</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal plan change -->
+            <!-- Modal terms -->
+            <div class="modal fade bd-terms-modal-xl" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Terms of Agreement</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="container">
+                      <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac ullamcorper massa. Cras ac erat eu massa mollis hendrerit efficitur gravida purus. Fusce sed libero non turpis tempor viverra scelerisque sit amet justo. Fusce varius neque ut odio sollicitudin cursus. Aliquam a purus porta lorem sodales feugiat. Maecenas non turpis id ante facilisis varius. Sed mi lacus, condimentum at tristique nec, faucibus eget mi. Integer dignissim dui lacus, a hendrerit nulla malesuada varius. Sed eleifend lobortis sapien, quis varius dolor auctor quis. Nunc eget eleifend urna, sed luctus sapien. Vestibulum a ultricies odio, at aliquam tellus. In ut congue nisi. Cras pulvinar pharetra sapien vel iaculis. In nec felis sapien. Etiam sagittis ante sed porta cursus. Aenean efficitur porta enim nec porta. In et est dolor. Phasellus sed augue sodales, ornare velit nec, cursus felis. Nam ut lorem eget mi tempor vulputate. Nunc commodo tempor lectus, nec ullamcorper nisl egestas ut. In cursus augue velit, eget tristique purus fringilla congue. Etiam pellentesque ac dui non aliquet. Quisque sagittis dapibus ipsum ut commodo. Integer vitae eros sit amet nibh congue efficitur. Phasellus tempus ex sed tortor consectetur iaculis sed ac arcu. Mauris odio elit, tincidunt vitae erat a, elementum tristique nibh. Curabitur in sapien non nisl maximus hendrerit vel in diam. Quisque at diam et justo egestas vulputate in non massa. Mauris eu turpis justo. Suspendisse tristique tincidunt quam, condimentum dapibus magna imperdiet in. Suspendisse eu odio sit amet turpis accumsan venenatis. Proin rutrum pretium eros, bibendum sodales diam consequat a. Cras scelerisque diam id mauris facilisis, ut lacinia nisl sagittis. Donec aliquet, enim vel convallis bibendum, lacus sapien ornare erat, nec eleifend ex ligula ut metus. Vivamus velit dui, congue quis urna vitae, pulvinar volutpat purus. Donec tristique felis quis neque lacinia, id suscipit nisi vehicula. Donec ac placerat tellus, vitae molestie massa. Suspendisse accumsan lectus vel nisl vehicula viverra. Vivamus sed dolor quam. Quisque pharetra dictum leo non tempor. Phasellus maximus non ante aliquet gravida. Fusce at sem a lorem fermentum hendrerit et id velit. Praesent ut dignissim turpis. Etiam purus enim, eleifend in nibh in, interdum porta felis. Integer eu lectus vitae turpis pharetra rhoncus. Sed tempor elit fermentum, rhoncus augue non, elementum sapien. Donec eu sodales nisi, et condimentum orci. Cras aliquet nec nibh a feugiat. Quisque pretium ex sed nisl vulputate molestie vehicula non felis. Vivamus tincidunt dui felis, in pellentesque turpis dictum eu. Cras eleifend tellus nibh, in lobortis lectus consequat sagittis. Phasellus sit amet diam vitae ipsum imperdiet lacinia ut fringilla libero. Suspendisse fringilla sapien in justo suscipit varius. Donec facilisis augue a justo cursus ultricies id sit amet risus. Ut sit amet velit lacus. Suspendisse in lectus ut neque auctor maximus nec sed quam. Vestibulum sed dui mi.</p>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- MODAL END-->
+        </section>
+      </content>
+    </main>
+    <!-- footer.njk -->
+    <footer role="contentinfo" class="">
+    </footer>
+    <!-- end footer.njk -->
+    <script src='assets/js/vendor/jquery-3.4.1.min.js'></script>
+    <script src='assets/js/jquery-ui.min.js'></script>
+    <script src='assets/js/vendor/bootstrap.bundle.min.js'></script>
+    <script src='assets/js/bootree.min.js'></script>
+    <script src='assets/js/quill.js'></script>
+    <script src='assets/js/snap.svg-min.js'></script>
+    <script src='assets/js/speekio-custom.js'></script>
+    <script src='assets/js/speekio-caller.js'></script>
+  </body>
+</html>
