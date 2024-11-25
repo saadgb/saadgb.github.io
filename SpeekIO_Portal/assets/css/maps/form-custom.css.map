@@ -1,1 +1,0 @@
-{"version":3,"sources":["form-custom.scss"],"names":[],"mappings":"AAEA,gBAAgB,CAChB;EAEA,KAAK,EAAE,IAAI;CAEV","file":"../form-custom.css","sourcesContent":["@charset \"UTF-8\";\r\n\r\n.weightage-width\r\n{\r\n\r\nwidth: 25px;\r\n\r\n}"]}
